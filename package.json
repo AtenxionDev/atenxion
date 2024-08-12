@@ -12,9 +12,11 @@
     "check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx,css,yaml,yml}\""
   },
   "dependencies": {
+    "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.6",
+    "@mui/material-nextjs": "^5.16.6",
     "husky": "^9.1.4",
     "next": "14.2.5",
     "react": "^18",

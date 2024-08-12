@@ -1,4 +1,5 @@
 /* eslint-disable */
+"use client"
 
 import { createTheme } from "@mui/material";
 
