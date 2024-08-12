@@ -1,4 +1,6 @@
+
 "use client"
+
 import { Box } from "@mui/material";
 import BodyText from "../../typeface/BodyText";
 // import theme from "@/app/utils/theme";
