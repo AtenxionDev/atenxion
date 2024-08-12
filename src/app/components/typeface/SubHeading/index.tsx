@@ -8,7 +8,7 @@ interface SubHeadingProps extends TypographyProps {
   props?: React.ComponentProps<typeof Typography>;
 }
 
-const SubHeading = ({ children, color ,...props}: SubHeadingProps) => {
+const SubHeading = ({ children, color, ...props }: SubHeadingProps) => {
   return (
     <Typography
       {...props}
