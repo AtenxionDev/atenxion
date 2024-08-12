@@ -1,5 +1,12 @@
+import { Box } from "@mui/material";
+import BodyText from "../../typeface/BodyText";
+
 function Navbar() {
-  return <div></div>;
+  return (
+    <Box>
+      <BodyText variant="medium"> Navbar error </BodyText>
+    </Box>
+  );
 }
 
 export default Navbar;

@@ -27,7 +27,7 @@ declare module "@mui/material/styles" {
 }
 const theme = createTheme({
   typography: {
-    fontFamily: ["Outfit", "Inter", "Roboto Mono"].join(","),
+    fontFamily: [, "Inter", "Outfit", "Roboto Mono"].join(","),
   },
   breakpoints: {
     values: {
