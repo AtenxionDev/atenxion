@@ -57,12 +57,12 @@ const theme = createTheme({
     // },
     custom: {
       yellow: "#F8BB4D",
-      black: "#1d212b",
+      black: "#121212",
       white: "#ffffff",
-      darkGrey: "#8e9095",
-      grey: "#dddedf",
+      darkGrey: "#d9d9d9",
+      grey: "#f8f8f8",
       greyText: "#343A40",
-      lightGrey: "#f4f4f4",
+      lightGrey: "#fafafa",
     },
   },
 });

@@ -1,3 +1,4 @@
+"use client";
 import theme from "@/app/utils/theme";
 import { Typography, TypographyProps } from "@mui/material";
 import React, { ReactNode } from "react";
