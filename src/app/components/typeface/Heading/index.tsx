@@ -8,6 +8,7 @@ const Heading = ({ children }: { children: ReactNode }) => {
         fontWeight: 600,
         fontSize: { md: "32px", xl: "36px" },
         lineHeight: "125%",
+        color: "#FFFFFF",
       }}
     >
       {children}
