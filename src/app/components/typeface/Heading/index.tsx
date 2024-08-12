@@ -6,7 +6,7 @@ const Heading = ({ children }: { children: ReactNode }) => {
     <Typography
       sx={{
         fontWeight: 600,
-        fontSize: { md: "32px", xl: "36px" },
+        fontSize: { md: "32px", lg: "32px", xl: "36px" },
         lineHeight: "125%",
       }}
     >
