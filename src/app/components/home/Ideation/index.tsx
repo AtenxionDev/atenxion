@@ -1,5 +1,3 @@
-"use client";
-import theme from "@/app/utils/theme";
 import { Box } from "@mui/material";
 import SubHeading from "../../typeface/SubHeading";
 import BodyText from "../../typeface/BodyText";
@@ -15,7 +13,7 @@ function Ideation() {
     <Box
       px={16}
       py={10}
-      bgcolor={theme.palette.custom.grey}
+      bgcolor={"custom.grey"}
       display={"flex"}
       alignItems="start"
     >
@@ -78,7 +76,7 @@ function IdeationItem({ title, description }: IdeationItemProps) {
         width="47px"
         height="47px"
         borderRadius="50%"
-        bgcolor={theme.palette.custom.darkGrey}
+        bgcolor={"custom.darkGrey"}
       ></Box>
 
       <Box width={"80%"} display="flex" flexDirection="column" gap={1}>

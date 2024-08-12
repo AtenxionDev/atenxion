@@ -1,19 +1,13 @@
-"use client";
-
 import { Box } from "@mui/material";
 import BodyText from "../../typeface/BodyText";
-// import theme from "@/app/utils/theme";
 import { navigation } from "@/app/data/navigation";
-import { useTheme } from "@mui/material/styles";
 
 function Navbar() {
-  const theme = useTheme();
-  console.log(theme);
   return (
     <Box
       width="100%"
       height="75px"
-      // bgcolor={theme}
+      bgcolor="custom.lightGrey"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
@@ -34,7 +28,7 @@ function Navbar() {
           </Box>
         ))}
 
-        <Box padding="12px 20px">
+        <Box padding="12px 20px" bgcolor="custom.black">
           <BodyText variant="medium" color="#fff">
             Contact us
           </BodyText>

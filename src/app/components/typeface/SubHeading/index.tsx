@@ -1,5 +1,3 @@
-"use client";
-import theme from "@/app/utils/theme";
 import { Typography, TypographyProps } from "@mui/material";
 import React, { ReactNode } from "react";
 
@@ -17,7 +15,7 @@ const SubHeading = ({ children, color, ...props }: SubHeadingProps) => {
         fontWeight: 600,
         fontSize: { md: "24px", xl: "28px" },
         lineHeight: "125%",
-        color: color ? color : theme.palette.custom.black,
+        color: color ? color : "custom.black",
       }}
     >
       {children}
