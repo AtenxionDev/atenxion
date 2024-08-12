@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 import { Box } from "@mui/material";
 import BodyText from "../../typeface/BodyText";
@@ -8,8 +7,8 @@ import { navigation } from "@/app/data/navigation";
 import { useTheme } from "@mui/material/styles";
 
 function Navbar() {
-  const theme = useTheme()
-  console.log(theme)
+  const theme = useTheme();
+  console.log(theme);
   return (
     <Box
       width="100%"
