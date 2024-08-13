@@ -34,7 +34,7 @@ const BodyText = ({
           {...props}
           sx={{
             fontWeight: weight ? weightDic[weight] : defaultWeight,
-            fontSize: { md: "16px", xl: "18px" },
+            fontSize: { md: "16px", lg: "18px", xl: "20px" },
             lineHeight: lineHeight ? lineHeight : "100%",
             color: color ? color : "custom.black",
           }}

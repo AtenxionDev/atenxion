@@ -7,8 +7,8 @@ const UseCase = () => {
   return (
     <Box
       sx={{
-         py: {xs:"30px",md:0},
-        px: {xs:"30px",md:"100px"},
+        py: { xs: "30px", md: 0 },
+        px: { xs: "30px", md: "100px" },
         minHeight: "100dvh",
         width: "100%",
         display: "flex",
@@ -17,14 +17,15 @@ const UseCase = () => {
         alignItems: "center",
       }}
     >
-      <SubHeading width={{xs:"auto",md:"500px"}} textAlign="center">
-        Learn how Atenxion helping through across different use cases
+      <SubHeading width={{ xs: "auto" }} textAlign="center">
+        Learn how Atenxion helping through <br />
+        across different use cases
       </SubHeading>
       {/* parent */}
       <Box
         sx={{
-          mt: {xs:"30px",md:"60px"},
-          width: {xs:"100%" ,md:"70%"},
+          mt: { xs: "30px", md: "60px" },
+          width: { xs: "100%", md: "90%", lg: "80%" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

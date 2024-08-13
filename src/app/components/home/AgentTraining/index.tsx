@@ -73,8 +73,8 @@ const AgentTraining = () => {
         alignItems: "center",
       }}
     >
-      <SubHeading width={{ xs: "auto", md: "500px" }} textAlign="center">
-        Learn how Atenxion quickly understands and trains your agent
+      <SubHeading width={{ xs: "auto" }} textAlign="center">
+        Learn how Atenxion quickly <br /> understands and trains your agent
       </SubHeading>
       <Box
         sx={{

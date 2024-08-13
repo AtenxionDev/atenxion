@@ -1,7 +1,13 @@
 import { Typography } from "@mui/material";
 import React, { ReactNode } from "react";
 
-const Heading = ({ children }: { children: ReactNode }) => {
+const Heading = ({
+  color,
+  children,
+}: {
+  color?: string;
+  children: ReactNode;
+}) => {
   return (
     <Typography
       sx={{
@@ -13,7 +19,7 @@ const Heading = ({ children }: { children: ReactNode }) => {
           xs: "27px",
         },
         lineHeight: "115%",
-        color: "#F2EFEA",
+        color: color || "#F2EFEA",
       }}
     >
       {children}
