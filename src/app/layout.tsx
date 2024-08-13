@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
@@ -9,7 +9,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./utils/theme";
 import { CssBaseline } from "@mui/material";
 
-const inter = Inter({ subsets: ["latin"] });
+const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Atenxion AI",
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={figtree.className}>
         <AppRouterCacheProvider options={{ key: "css" }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />

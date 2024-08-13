@@ -8,7 +8,7 @@ function Hero() {
   return (
     <Box
       display="flex"
-      flexDirection={{ xs: "column", md: "row" }}
+      flexDirection={{ xs: "column", lg: "row" }}
       bgcolor="secondary.main"
       gap={20}
       py={7}
