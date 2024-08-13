@@ -45,10 +45,11 @@ const theme = createTheme({
       light: "#e8f0ff",
     },
     secondary: {
-      main: "#F1EEEF",
+      main: "#031E59",
+      light: "#F2EFEA",
     },
     success: {
-      main: "#6AC874",
+      main: "#4D85FF",
     },
     error: {
       main: "#ef476f",
@@ -58,7 +59,7 @@ const theme = createTheme({
     // },
     custom: {
       yellow: "#F8BB4D",
-      black: "#121212",
+      black: "#17191C",
       white: "#ffffff",
       darkGrey: "#d9d9d9",
       grey: "#f8f8f8",
