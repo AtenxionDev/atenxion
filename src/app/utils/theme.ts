@@ -16,7 +16,8 @@ declare module "@mui/material/styles" {
   }
   interface PaletteOptions {
     custom?: {
-      yellow: string;
+      borderDarkBlue: string;
+      cream: string;
       black: string;
       white: string;
       darkGrey: string;
@@ -58,7 +59,8 @@ const theme = createTheme({
     //   main: "#F8BB4D",
     // },
     custom: {
-      yellow: "#F8BB4D",
+      borderDarkBlue: "#293A5E",
+      cream: "#f2efea",
       black: "#17191C",
       white: "#ffffff",
       darkGrey: "#d9d9d9",
