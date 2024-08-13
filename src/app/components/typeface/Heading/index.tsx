@@ -11,16 +11,15 @@ const Heading = ({
   return (
     <Typography
       sx={{
-        fontWeight: 600,
+        fontWeight: 700,
         fontSize: {
-          xs: "18px",
-          sm: "24px",
           md: "32px",
-          lg: "32px",
-          xl: "36px",
+          lg: "48px",
+          sm: "30px",
+          xs: "27px",
         },
-        lineHeight: "125%",
-        color: color || "#FFFFFF",
+        lineHeight: "115%",
+        color: color || "#F2EFEA",
       }}
     >
       {children}

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Integration() {
   return (
-    <Box display="flex" justifyContent="center" py={{ lg: 12, md: 8, xs: 6 }}>
+    <Box display="flex" justifyContent="center" py={{ lg: 8, md: 6, xs: 6 }}>
       <Box
         width={{ lg: "1000px", md: "85%", xs: "100%" }}
         flexDirection={{ md: "row", xs: "column" }}
