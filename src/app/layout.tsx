@@ -27,7 +27,7 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ key: "css" }}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            {/* <Navbar /> */}
+            <Navbar />
             <main>{children}</main>
             <Footer />
           </ThemeProvider>

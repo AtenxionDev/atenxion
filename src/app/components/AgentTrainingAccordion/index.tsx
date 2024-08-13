@@ -2,9 +2,8 @@ import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
 import BodyText from "../typeface/BodyText";
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import { PanelData } from "../home/AgentTraining";
 
 

@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
 import SubHeading from "../../typeface/SubHeading";
-import BodyText from "../../typeface/BodyText";
 import UseCaseCard from "../../UseCaseCard";
 
 const UseCase = () => {
