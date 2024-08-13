@@ -30,13 +30,14 @@ function Footer() {
         gap={{ sm: 8 }}
         width={"100%"}
         bgcolor={"#fff"}
-        p={8}
+        py={8}
+        px={{ xs: "30px", sm: "40px", md: "60px", lg: "90px" }}
       >
         <Box
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"space-between"}
-          width={"50%"}
+          flex={1}
         >
           <SubHeading>Atenxion</SubHeading>
           <Box sx={{ opacity: 0.5 }}>
@@ -44,7 +45,7 @@ function Footer() {
           </Box>
         </Box>
 
-        <Box display={"flex"} gap={10}>
+        <Box display={"flex"} justifyContent={"end"} gap={10} flex={1}>
           <Box display="flex" flexDirection={"column"} gap={2}>
             <BodyText variant="medium" weight="bold">
               Product
