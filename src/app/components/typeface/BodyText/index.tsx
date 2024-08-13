@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 
 interface BodyTextProps extends Omit<TypographyProps, "variant"> {
   children: ReactNode;
-  weight?: "regular" | "medium" | "semibold";
+  weight?: "regular" | "medium" | "semibold" | "bold";
   variant: "large" | "medium" | "small";
   color?: string;
   component?: "span";
@@ -24,6 +24,7 @@ const BodyText = ({
     regular: 400,
     medium: 500,
     semibold: 600,
+    bold: 700,
   };
   const defaultWeight = variant === "large" ? "medium" : "regular";
   switch (variant) {
@@ -33,7 +34,7 @@ const BodyText = ({
           {...props}
           sx={{
             fontWeight: weight ? weightDic[weight] : defaultWeight,
-            fontSize: { md: "16px", xl: "18px" },
+            fontSize: { md: "16px", lg: "18px", xl: "20px" },
             lineHeight: lineHeight ? lineHeight : "100%",
             color: color ? color : "custom.black",
           }}
@@ -47,7 +48,7 @@ const BodyText = ({
           {...props}
           sx={{
             fontWeight: weight ? weightDic[weight] : defaultWeight,
-            fontSize: { md: "14px", xl: "16px" },
+            fontSize: { md: "14px", lg: "16px", xl: "16px" },
             lineHeight: lineHeight ? lineHeight : "125%",
             color: color ? color : "custom.black",
           }}
