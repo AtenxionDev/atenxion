@@ -5,6 +5,7 @@ interface IProps {
   label: string;
   width?: string;
   height?: string;
+  border?: string;
   onClick?: any;
   disabled?: boolean;
   loading?: boolean;
@@ -13,8 +14,9 @@ interface IProps {
 }
 function ButtonComponent({
   label,
-  width,
+  width = "fit-content",
   height,
+  border,
   onClick,
   disabled = false,
   loading = false,
@@ -35,6 +37,7 @@ function ButtonComponent({
         width: width,
         textTransform: "none",
         height: height || "48px",
+        border: border,
         borderRadius: "8px",
         background: disabled ? "#BBB9BA" : color,
         letterSpacing: 0.5,

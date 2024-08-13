@@ -1,11 +1,11 @@
-import HowItWorks from "./components/home/HowItWorks";
-import Ideation from "./components/home/Ideation";
+import BookDemo from "./components/home/BookDemo";
+import Hero from "./components/home/Hero";
 
 export default function Home() {
   return (
     <>
-      <HowItWorks />
-      <Ideation />
+      <Hero />
+      <BookDemo />
     </>
   );
 }

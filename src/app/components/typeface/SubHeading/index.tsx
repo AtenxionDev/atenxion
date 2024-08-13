@@ -13,7 +13,7 @@ const SubHeading = ({ children, color, ...props }: SubHeadingProps) => {
       {...props}
       sx={{
         fontWeight: 600,
-        fontSize: { md: "24px", xl: "28px" },
+        fontSize: { md: "30px", xl: "42px", lg: "40px", xs: "26px" },
         lineHeight: "125%",
         color: color ? color : "custom.black",
       }}

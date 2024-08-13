@@ -5,10 +5,15 @@ const Heading = ({ children }: { children: ReactNode }) => {
   return (
     <Typography
       sx={{
-        fontWeight: 600,
-        fontSize: { md: "32px", lg: "32px", xl: "36px" },
-        lineHeight: "125%",
-        color: "#FFFFFF",
+        fontWeight: 700,
+        fontSize: {
+          md: "32px",
+          lg: "48px",
+          sm: "30px",
+          xs: "27px",
+        },
+        lineHeight: "115%",
+        color: "#F2EFEA",
       }}
     >
       {children}
