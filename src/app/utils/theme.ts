@@ -1,6 +1,7 @@
 /* eslint-disable */
+"use client";
 
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -15,7 +16,8 @@ declare module "@mui/material/styles" {
   }
   interface PaletteOptions {
     custom?: {
-      yellow: string;
+      borderDarkBlue: string;
+      cream: string;
       black: string;
       white: string;
       darkGrey: string;
@@ -27,7 +29,7 @@ declare module "@mui/material/styles" {
 }
 const theme = createTheme({
   typography: {
-    fontFamily: ["Outfit", "Inter", "Roboto Mono"].join(","),
+    fontFamily: [, "Inter", "Outfit", "Roboto Mono"].join(","),
   },
   breakpoints: {
     values: {
@@ -44,10 +46,11 @@ const theme = createTheme({
       light: "#e8f0ff",
     },
     secondary: {
-      main: "#F1EEEF",
+      main: "#031E59",
+      light: "#F2EFEA",
     },
     success: {
-      main: "#6AC874",
+      main: "#4D85FF",
     },
     error: {
       main: "#ef476f",
@@ -56,13 +59,14 @@ const theme = createTheme({
     //   main: "#F8BB4D",
     // },
     custom: {
-      yellow: "#F8BB4D",
-      black: "#1d212b",
+      borderDarkBlue: "#293A5E",
+      cream: "#f2efea",
+      black: "#17191C",
       white: "#ffffff",
-      darkGrey: "#8e9095",
-      grey: "#dddedf",
+      darkGrey: "#d9d9d9",
+      grey: "#f8f8f8",
       greyText: "#343A40",
-      lightGrey: "#f4f4f4",
+      lightGrey: "#fafafa",
     },
   },
 });
