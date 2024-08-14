@@ -19,12 +19,24 @@ function AspectComponent({
   return (
     <Box
       position={"relative"}
-      width={{ xs: "fit-content", md: "720px", lg: "340px" }}
+      width={{ xs: "340px", md: "340px", lg: "340px" }}
       display={"flex"}
-      flexDirection={{ xs: "row", lg: "column" }}
-      mx={{ xs: 1, lg: 0 }}
+      flexDirection="column"
+      // mx={{ xs: 1, md: 0 }}
     >
-      <Image src={img1} alt="frame" width={340} height={198} />
+      <Box display="flex" flexWrap="wrap" justifyContent="center">
+        <Image
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            objectFit: "contain",
+          }}
+          src={img1}
+          alt="frame"
+          width={340}
+          height={198}
+        />
+      </Box>
 
       {img2 && (
         <Box position={"absolute"} top={"74px"} left={"-28px"}>
@@ -37,12 +49,12 @@ function AspectComponent({
         flexDirection={"column"}
         gap={1}
         bgcolor={"custom.cream"}
-        mt={{ xs: "6px", lg: -1 }}
-        ml={{ xs: -2, lg: 0 }}
+        mt="-1"
+        // ml={{ xs: -2, md: 0 }}
         height={{ xs: "198px", lg: "200px" }}
         pt={4}
         px={3}
-        borderRadius={{ xs: "0px 16px 16px 0px", lg: "0px 0px 16px 16px" }}
+        borderRadius="0px 0px 16px 16px"
         overflow={"hidden"}
       >
         <BodyText variant="large" weight="semibold">

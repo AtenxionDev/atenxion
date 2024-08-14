@@ -22,6 +22,7 @@ function Hero() {
         width="100%"
         flexDirection={{ xs: "column", lg: "row" }}
         gap={10}
+        px={{ md: 8, xs: 4 }}
       >
         <Box display="flex" flexDirection="column" gap="16px" flex={1}>
           <Heading>
@@ -58,7 +59,11 @@ function Hero() {
             width={570}
             height={425}
             alt="hero"
-            style={{ width: "100%", height: "auto", objectFit: "contain" }}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "contain",
+            }}
           />
         </Box>
       </Box>
