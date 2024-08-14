@@ -32,10 +32,10 @@ function Integration() {
 
         <Box>
           <Image
-            src="/assets/integration.svg"
+            src="/assets/integration-new.svg"
             alt="integration"
-            width={300}
-            height={400}
+            width={350}
+            height={450}
           />
         </Box>
       </Box>
