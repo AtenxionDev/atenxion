@@ -7,6 +7,7 @@ interface UseCaseCardProps {
   description: string;
   width?: string;
   height?: string;
+  image?: React.ReactNode;
 }
 
 const UseCaseCard = ({
@@ -14,25 +15,30 @@ const UseCaseCard = ({
   description,
   width,
   height,
+  image,
 }: UseCaseCardProps) => {
   return (
     <Box
       bgcolor="custom.cream"
       width={{ xs: "100%", md: width }}
-      minHeight={{ xs: "150px", md: height }}
-      padding={4}
+      minHeight={{ xs: "380px", md: height }}
       borderRadius="16px"
+      display="flex"
+      flexDirection="column"
     >
-      <BodyText variant="large" weight="semibold">
-        {title}
-      </BodyText>
-      <BodyText
-        variant="medium"
-        mt={2}
-        width={{ xs: "100%", sm: "80%", md: "90%", lg: "80%" }}
-      >
-        {description}
-      </BodyText>
+      <Box p={4}>
+        <BodyText variant="large" weight="semibold">
+          {title}
+        </BodyText>
+        <BodyText
+          variant="medium"
+          mt={2}
+          width={{ xs: "100%", sm: "80%", md: "90%", lg: "80%" }}
+        >
+          {description}
+        </BodyText>
+      </Box>
+      {image}
     </Box>
   );
 };
