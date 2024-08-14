@@ -1,6 +1,5 @@
-import { Box, Divider } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
-import SubHeading from "../../typeface/SubHeading";
 import UseCaseCard from "../../UseCaseCard";
 import Image from "next/image";
 
@@ -21,172 +20,156 @@ const UseCase = () => {
       {/* parent */}
       <Box
         sx={{
-          minHeight: "100dvh",
+          mt: { xs: "30px", md: "60px" },
+          width: { xs: "100%", md: "90%", lg: "80%" },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          gap: "20px",
         }}
-        id="usecases"
       >
-        <SubHeading width={{ xs: "auto" }} textAlign="center">
-          Learn how Atenxion helping through <br />
-          across different use cases
-        </SubHeading>
-        {/* parent */}
+        {/* first row */}
         <Box
           sx={{
-            mt: { xs: "30px", md: "60px" },
-            width: { xs: "100%", md: "90%", lg: "80%" },
+            width: "100%",
             display: "flex",
-            flexDirection: "column",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "stretch",
             gap: "20px",
           }}
         >
-          {/* first row */}
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              justifyContent: "center",
-              alignItems: "stretch",
-              gap: "20px",
-            }}
-          >
-            <UseCaseCard
-              title="Customer Engagement"
-              description="Empower your business with a 24/7 AI-powered chatbot to handle customer
+          <UseCaseCard
+            title="Customer Engagement"
+            description="Empower your business with a 24/7 AI-powered chatbot to handle customer
         service inquiries instantly. Reduce support tickets and lower service
         costs without compromising on quality, ensuring a seamless support
         experience."
-              height="400px" //height for row 1
-              width="60%"
-              image={
-                <Box
-                  sx={{
-                    alignSelf: "end",
-                    flex: 1,
-                    display: "flex",
-                    justifyContent: "end",
-                    alignItems: "end",
-                    width: "80%",
-                    height: "100%",
-                  }}
-                >
-                  <Image
-                    src={"/assets/customer.png"}
-                    style={{ aspectRatio: "auto" }}
-                    layout="responsive"
-                    width={200}
-                    height={200}
-                    alt="customer-engagement-image"
-                  />
-                </Box>
-              }
-            />
-            <UseCaseCard
-              title="AI copilots tailored to your industry"
-              description="Offering tailored support, real-time assistance, and seamless interactions in Finance, Telco, Real Estate, Healthcare, and beyond."
-              height="100%"
-              width="40%"
-              image={
-                <Box
-                  sx={{
-                    flex: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "70%",
-                    height: "100%",
-                    mx: "auto",
-                  }}
-                >
-                  <Image
-                    src={"/assets/knowledge.png"}
-                    objectFit="contain"
-                    layout="responsive"
-                    style={{ aspectRatio: "auto" }}
-                    width={300}
-                    height={150}
-                    alt="knowledge.png"
-                  />
-                </Box>
-              }
-            />
-          </Box>
+            height="400px" //height for row 1
+            width="60%"
+            image={
+              <Box
+                sx={{
+                  alignSelf: "end",
+                  flex: 1,
+                  display: "flex",
+                  justifyContent: "end",
+                  alignItems: "end",
+                  width: "80%",
+                  height: "100%",
+                }}
+              >
+                <Image
+                  src={"/assets/customer.png"}
+                  style={{ aspectRatio: "auto" }}
+                  layout="responsive"
+                  width={200}
+                  height={200}
+                  alt="customer-engagement-image"
+                />
+              </Box>
+            }
+          />
+          <UseCaseCard
+            title="AI copilots tailored to your industry"
+            description="Offering tailored support, real-time assistance, and seamless interactions in Finance, Telco, Real Estate, Healthcare, and beyond."
+            height="100%"
+            width="40%"
+            image={
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "70%",
+                  height: "100%",
+                  mx: "auto",
+                }}
+              >
+                <Image
+                  src={"/assets/knowledge.png"}
+                  objectFit="contain"
+                  layout="responsive"
+                  style={{ aspectRatio: "auto" }}
+                  width={300}
+                  height={150}
+                  alt="knowledge.png"
+                />
+              </Box>
+            }
+          />
+        </Box>
 
-          {/* second row */}
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexDirection: { xs: "column-reverse", md: "row-reverse" },
-              justifyContent: "center",
-              alignItems: "stretch",
-              gap: "20px",
-            }}
-          >
-            <UseCaseCard
-              title="Enterprise Knowledgebase"
-              description="Enable conversational queries across internal knowledge sources, integrating data from diverse sources such as documents, databases, and cloud storage platforms like Google Drive."
-              height="350px" //height for row 2
-              width="60%"
-              image={
-                <Box
-                  sx={{
-                    flex: 1,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "70%",
-                    height: "100%",
-                    mx: "auto",
-                  }}
-                >
-                  <Image
-                    src={"/assets/knowledge.png"}
-                    objectFit="contain"
-                    layout="responsive"
-                    style={{ aspectRatio: "auto" }}
-                    width={300}
-                    height={150}
-                    alt="knowledge.png"
-                  />
-                </Box>
-              }
-            />
-            <UseCaseCard
-              title="Lead generation"
-              description="Deploy your AI Agent to collect and qualify leads, providing personalized interactions that drive engagement. Enhance your sales strategy with actionable insights derived from user interactions."
-              height="100%"
-              width="40%"
-              image={
-                <Box
-                  sx={{
-                    flex: 1,
-                    width: "95%",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "flex-end",
-                    justifyContent: "end",
-                    // aspectRatio: 'auto'
-                  }}
-                >
-                  <Image
-                    src={"/assets/lead.svg"}
-                    objectFit="contain"
-                    style={{ aspectRatio: 1 }}
-                    width={200}
-                    height={150}
-                    alt="customer-engagement-image"
-                  />
-                </Box>
-              }
-            />
-          </Box>
+        {/* second row */}
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: { xs: "column-reverse", md: "row-reverse" },
+            justifyContent: "center",
+            alignItems: "stretch",
+            gap: "20px",
+          }}
+        >
+          <UseCaseCard
+            title="Enterprise Knowledgebase"
+            description="Enable conversational queries across internal knowledge sources, integrating data from diverse sources such as documents, databases, and cloud storage platforms like Google Drive."
+            height="350px" //height for row 2
+            width="60%"
+            image={
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "70%",
+                  height: "100%",
+                  mx: "auto",
+                }}
+              >
+                <Image
+                  src={"/assets/knowledge.png"}
+                  objectFit="contain"
+                  layout="responsive"
+                  style={{ aspectRatio: "auto" }}
+                  width={300}
+                  height={150}
+                  alt="knowledge.png"
+                />
+              </Box>
+            }
+          />
+          <UseCaseCard
+            title="Lead generation"
+            description="Deploy your AI Agent to collect and qualify leads, providing personalized interactions that drive engagement. Enhance your sales strategy with actionable insights derived from user interactions."
+            height="100%"
+            width="40%"
+            image={
+              <Box
+                sx={{
+                  flex: 1,
+                  width: "95%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  justifyContent: "end",
+                  // aspectRatio: 'auto'
+                }}
+              >
+                <Image
+                  src={"/assets/lead.svg"}
+                  objectFit="contain"
+                  style={{ aspectRatio: 1 }}
+                  width={200}
+                  height={150}
+                  alt="customer-engagement-image"
+                />
+              </Box>
+            }
+          />
         </Box>
       </Box>
     </Box>
