@@ -2,23 +2,22 @@ import React from "react";
 import { Box } from "@mui/material";
 import BodyText from "../../typeface/BodyText";
 import SubHeading from "../../typeface/SubHeading";
-
-const features = [
-  { title: "How it works", link: "/" },
-  { title: "Features", link: "/" },
-  { title: "Usecases", link: "/" },
-];
+import { navigation } from "@/app/data/navigation";
 
 const documentation = [
-  { title: "Documentation", link: "/" },
-  { title: "Contact us", link: "/" },
-  { title: "Privacy policy", link: "/" },
-  { title: "Terms & conditions", link: "/" },
+  {
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/company/atenxion",
+  },
+  {
+    title: "Facebook",
+    link: "https://www.facebook.com/Atenxion",
+  },
 ];
 
 const contacts = [
-  { title: "company@mail.com", link: "/" },
-  { title: "+99 12345689", link: "/" },
+  { title: "win@brillar.io", link: "/" },
+  { title: "+65 96322602", link: "/" },
 ];
 
 function Footer() {
@@ -50,7 +49,7 @@ function Footer() {
             <BodyText variant="medium" weight="bold">
               Product
             </BodyText>
-            {features.map((item) => (
+            {navigation.map((item) => (
               <BodyText key={item.title} variant="medium" color="custom.black">
                 <a
                   href={item.link}
@@ -64,7 +63,7 @@ function Footer() {
 
           <Box display="flex" flexDirection={"column"} gap={2}>
             <BodyText variant="medium" weight="bold">
-              Resources
+              Socials
             </BodyText>
             {documentation.map((item) => (
               <BodyText key={item.title} variant="medium" color="custom.black">
