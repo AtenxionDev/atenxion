@@ -22,6 +22,7 @@ function AspectComponent({
       width={{ xs: "fit-content", md: "720px", lg: "340px" }}
       display={"flex"}
       flexDirection={{ xs: "row", lg: "column" }}
+      mx={{ xs: 1, lg: 0 }}
     >
       <Image src={img1} alt="frame" width={340} height={198} />
 
@@ -42,6 +43,7 @@ function AspectComponent({
         pt={4}
         px={3}
         borderRadius={{ xs: "0px 16px 16px 0px", lg: "0px 0px 16px 16px" }}
+        overflow={"hidden"}
       >
         <BodyText variant="large" weight="semibold">
           {title}

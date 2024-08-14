@@ -25,8 +25,8 @@ function Footer() {
     <>
       <Box
         display={"flex"}
-        flexDirection={{ sm: "column", md: "row" }}
-        gap={{ sm: 8 }}
+        flexDirection={{ xs: "column", md: "row" }}
+        gap={{ xs: 6 }}
         width={"100%"}
         bgcolor={"#fff"}
         py={8}
@@ -44,7 +44,7 @@ function Footer() {
           </Box>
         </Box>
 
-        <Box display={"flex"} justifyContent={"end"} gap={10} flex={1}>
+        <Box display={"flex"} justifyContent={{ md: "end" }} gap={10} flex={1}>
           <Box display="flex" flexDirection={"column"} gap={2}>
             <BodyText variant="medium" weight="bold">
               Product
