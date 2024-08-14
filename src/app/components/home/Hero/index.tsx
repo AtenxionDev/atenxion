@@ -8,16 +8,21 @@ function Hero() {
   return (
     <Box
       display="flex"
-      flexDirection={{ xs: "column", lg: "row" }}
       bgcolor="secondary.main"
-      gap={20}
       alignContent="center"
       justifyContent="center"
       height={{ xs: "auto", lg: "100vh" }}
       pb={{ xs: "30px", sm: "50px", md: "90px", lg: "120px" }}
       // px={{ xs: "30px", sm: "50px", md: "90px", lg: "120px" }}
     >
-      <Box maxWidth="1200px" display="flex" alignItems="center" width="100%">
+      <Box
+        maxWidth="1200px"
+        display="flex"
+        alignItems="center"
+        width="100%"
+        flexDirection={{ xs: "column", lg: "row" }}
+        gap={10}
+      >
         <Box display="flex" flexDirection="column" gap="16px" flex={1}>
           <Heading>
             Build{" "}
@@ -47,13 +52,15 @@ function Hero() {
             />
           </Box>
         </Box>
-
-        <Image
-          src="/assets/hero-image.png"
-          width={570}
-          height={425}
-          alt="hero"
-        />
+        <Box display="flex" flexWrap="wrap">
+          <Image
+            src="/assets/hero-image.png"
+            width={570}
+            height={425}
+            alt="hero"
+            style={{ width: "100%", height: "auto", objectFit: "contain" }}
+          />
+        </Box>
       </Box>
     </Box>
   );

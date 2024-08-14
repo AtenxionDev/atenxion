@@ -15,15 +15,15 @@ export type Navigation = {
 export const navigation: Navigation[] = [
   {
     title: "How it works",
-    link: "/",
+    link: "/#howItWorks",
   },
   {
     title: "Features",
-    link: "/",
+    link: "/#features",
   },
   {
     title: "Usecases",
-    link: "/",
+    link: "/#usecases",
   },
   //   {
   //     title: "Contact us",

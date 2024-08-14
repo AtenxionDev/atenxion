@@ -6,6 +6,7 @@ import { useWindowDimensions } from "@/app/hooks/useWindowDimensions";
 import { useScrollPositions } from "@/app/hooks/useScrollPositions";
 import BodyText from "../../typeface/BodyText";
 import ButtonComponent from "../ButtonComponent";
+import Link from "next/link";
 
 interface IProps {
   updateNavState?: boolean;
@@ -44,15 +45,15 @@ function Navbar({ updateNavState = true }: IProps) {
       display={"flex"}
       alignItems={"center"}
       justifyContent={"space-between"}
-      px={{ md: 5, lg: 7 }}
+      // px={{ md: 5, lg: 7 }}
       boxShadow={{
-        md: scrolled || show ? "0px 16px 48px 0px rgba(0, 0, 0, 0.02)" : "none",
+        xs: scrolled || show ? "0px 16px 48px 0px rgba(0, 0, 0, 0.02)" : "none",
       }}
-      border={{ md: scrolled || show ? "1px solid #e9eced" : "none" }}
+      border={{ xs: scrolled || show ? "1px solid custom.darkGrey" : "none" }}
     >
       {/* menu button */}
       <Box
-        display={{ sm: "block", md: "none" }}
+        display={{ md: "block", lg: "none" }}
         position={"absolute"}
         right={36}
         sx={{ cursor: "pointer" }}
@@ -82,40 +83,51 @@ function Navbar({ updateNavState = true }: IProps) {
       </Box>
 
       {/* logo */}
-      <Box mx={{ sm: 4, md: 0 }}>
-        <BodyText
-          variant="large"
-          color={!show ? " #fff" : "secondary.main"}
-          weight={!show ? "regular" : "bold"}
-        >
-          Atenxion
-        </BodyText>
+      <Box mx={{ xs: 4 }}>
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <BodyText
+            variant="large"
+            color={!show ? " #fff" : "secondary.main"}
+            weight={!show ? "regular" : "bold"}
+          >
+            Atenxion
+          </BodyText>
+        </Link>
       </Box>
 
       {/* Menu items */}
       <Box
-        display={{ sm: openResponsiveNav ? "flex" : "none", md: "flex" }}
-        flexDirection={{ sm: "column", md: "row" }}
-        position={{ sm: "absolute", md: "unset" }}
-        top={{ sm: "75px" }}
+        display={{ xs: openResponsiveNav ? "flex" : "none", lg: "flex" }}
+        flexDirection={{ xs: "column", lg: "row" }}
+        position={{ xs: "absolute", lg: "unset" }}
+        top={{ xs: "73px" }}
         alignItems={"center"}
-        gap={{ sm: 2, md: "52px" }}
-        bgcolor={{ sm: !show ? "secondary.main" : "#fff", md: "transparent" }}
-        width={{ sm: "100%", md: "fit-content" }}
-        pb={{ sm: 4, md: 0 }}
+        gap={{ xs: 2, lg: "52px" }}
+        bgcolor={{ xs: !show ? "secondary.main" : "#fff", lg: "transparent" }}
+        width={{ xs: "100%", lg: "fit-content" }}
+        pb={{ xs: 4, lg: 0 }}
+        pr={{ lg: 4 }}
       >
         {navigation?.map((item) => (
-          <Box key={item.title} sx={{ cursor: "pointer" }}>
-            <BodyText
-              variant="medium"
-              color={!show ? " #fff" : "secondary.main"}
-              weight={!show ? "regular" : "semibold"}
-            >
-              {item.title}
-            </BodyText>
-          </Box>
+          <a
+            key={item.title}
+            href={item.link}
+            style={{ textDecoration: "none" }}
+          >
+            <Box key={item.title} sx={{ cursor: "pointer" }}>
+              <BodyText
+                variant="medium"
+                color={!show ? " #fff" : "secondary.main"}
+                weight={!show ? "regular" : "semibold"}
+              >
+                {item.title}
+              </BodyText>
+            </Box>
+          </a>
         ))}
-        <ButtonComponent label="Contact us" color={"primary.main"} />
+        <a href="#contact" style={{ textDecoration: "none" }}>
+          <ButtonComponent label="Contact us" color={"primary.main"} />
+        </a>
       </Box>
     </Box>
   );

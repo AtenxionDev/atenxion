@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Divider } from "@mui/material";
 import React from "react";
 import SubHeading from "../../typeface/SubHeading";
 import UseCaseCard from "../../UseCaseCard";
@@ -51,7 +51,7 @@ const UseCase = () => {
         service inquiries instantly. Reduce support tickets and lower service
         costs without compromising on quality, ensuring a seamless support
         experience."
-            height="400px"  //height for row 1
+            height="400px" //height for row 1
             width="60%"
             image={
               <Box

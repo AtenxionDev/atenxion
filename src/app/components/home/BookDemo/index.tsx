@@ -20,6 +20,7 @@ function BookDemo() {
         mx={{ xs: "30px", sm: "40px", md: "60px", lg: "90px" }}
         position="relative"
         borderRadius="16px"
+        id="contact"
       >
         <Box
           position="absolute"

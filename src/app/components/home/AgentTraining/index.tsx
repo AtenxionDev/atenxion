@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import SubHeading from "../../typeface/SubHeading";
 import AgentTrainingAccordion from "../../AgentTrainingAccordion";
+import Layout from "../../common/Layout";
 
 export interface PanelData {
   id: string;
@@ -60,47 +61,46 @@ const AgentTraining = () => {
       setImage(panel.image);
     };
   return (
-    <Box
-      sx={{
-        py: { xs: "30px", md: 0 },
-        bgcolor: "custom.cream",
-        px: { xs: "30px", md: "100px" },
-        minHeight: "100dvh",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <SubHeading width={{ xs: "auto" }} textAlign="center">
-        Learn how Atenxion quickly <br /> understands and trains your agent
-      </SubHeading>
+    <Layout bgColor="custom.cream">
       <Box
         sx={{
-          mt: { xs: "30px", md: "60px" },
-          width: "100%",
+          minHeight: "100dvh",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          gap: "40px",
         }}
+        id="howItWorks"
       >
+        <SubHeading width={{ xs: "auto" }} textAlign="center">
+          Learn how Atenxion quickly <br /> understands and trains your agent
+        </SubHeading>
         <Box
-          width={{ xs: "100%", md: "50%" }}
-          height={{ xs: "300px", md: "500px" }}
-          bgcolor={image}
-        ></Box>
-        <Box width={{ xs: "100%", md: "40%" }}>
-          <AgentTrainingAccordion
-            data={data}
-            handleChange={handleChange}
-            expanded={expanded}
-          />
+          sx={{
+            mt: { xs: "30px", md: "60px" },
+            width: "100%",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "40px",
+          }}
+        >
+          <Box
+            width={{ xs: "100%", md: "50%" }}
+            height={{ xs: "300px", md: "500px" }}
+            bgcolor={image}
+          ></Box>
+          <Box width={{ xs: "100%", md: "40%" }}>
+            <AgentTrainingAccordion
+              data={data}
+              handleChange={handleChange}
+              expanded={expanded}
+            />
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </Layout>
   );
 };
 
