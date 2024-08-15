@@ -64,6 +64,7 @@ function Navbar({ updateNavState = true }: IProps) {
         {/* menu button */}
         <Box
           display={{ md: "block", lg: "none" }}
+          zIndex={100}
           position={"absolute"}
           right={36}
           sx={{ cursor: "pointer" }}
@@ -75,7 +76,7 @@ function Navbar({ updateNavState = true }: IProps) {
               viewBox="0 0 24 24"
               width="24"
               height="24"
-              fill="white"
+              fill="custom.black"
               // fill={!show ? "#fff" : "secondary.main"}
             >
               <path d="M18.3 5.71a1 1 0 00-1.41 0L12 10.59 7.11 5.7a1 1 0 00-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 101.41 1.41L12 13.41l4.89 4.89a1 1 0 001.41-1.41L13.41 12l4.89-4.89a1 1 0 000-1.41z" />
@@ -86,7 +87,7 @@ function Navbar({ updateNavState = true }: IProps) {
               viewBox="0 0 24 24"
               width="24"
               height="24"
-              fill={!show ? "#fff" : "secondary.main"}
+              fill="custom.black"
             >
               <path d="M3 6h18c0.55 0 1 0.45 1 1s-0.45 1-1 1H3C2.45 8 2 7.55 2 7s0.45-1 1-1zm0 5h18c0.55 0 1 0.45 1 1s-0.45 1-1 1H3c-0.55 0-1-0.45-1-1s0.45-1 1-1zm0 5h18c0.55 0 1 0.45 1 1s-0.45 1-1 1H3c-0.55 0-1-0.45-1-1s0.45-1 1-1z" />
             </svg>
@@ -125,7 +126,7 @@ function Navbar({ updateNavState = true }: IProps) {
           top={{ xs: "73px" }}
           alignItems={"center"}
           gap={{ xs: 2, lg: "52px" }}
-          bgcolor="transparent"
+          bgcolor="white"
           // bgcolor={{ xs: !show ? "secondary.main" : "#fff", lg: "transparent" }}
           width={{ xs: "100%", lg: "fit-content" }}
           pb={{ xs: 4, lg: 0 }}

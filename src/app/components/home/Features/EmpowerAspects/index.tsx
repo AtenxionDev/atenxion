@@ -19,7 +19,7 @@ function EmpowerAspects() {
         mb={{ xs: 2, lg: 0 }}
       >
         <Heading color="custom.black">
-          Empowering in every aspect for your needs
+          Custom AI, Zero Coding, Infinite Possibilities.
         </Heading>
       </Box>
 
@@ -32,15 +32,15 @@ function EmpowerAspects() {
         id="features"
       >
         <AspectComponent
-          img1="/assets/features/leadgenFrame.svg"
-          img2="/assets/features/leadgen.svg"
+          img1="/assets/features/leadFrame.png"
+          img2="/assets/features/lead.png"
           title="Lead Generation"
           description="Enhance customer interactions by collecting leads and gathering
               data while delivering a personalized experience"
         />
 
         <AspectComponent
-          img1="/assets/features/sqlFrame.svg"
+          img1="/assets/features/sqlFrame.png"
           title="Chat with Your SQL"
           description="Connect your SQL database to the AI agent, allowing for natural
               language queries and instant results, including visualizations."

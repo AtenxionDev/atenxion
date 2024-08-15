@@ -79,7 +79,7 @@ export const ContactUsForm = () => {
           Please fill up the following information
         </BodyText>
 
-        <Box width={{ xs: "300px", sm: "450px", md: "520px" }}>
+        <Box width={{ xs: "320px", sm: "450px", md: "520px" }}>
           <Formik
             initialValues={initialValues}
             validationSchema={ContactFormSchema}

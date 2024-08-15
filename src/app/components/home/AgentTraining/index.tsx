@@ -97,12 +97,11 @@ const AgentTraining = () => {
           <Box
             width={{ xs: "auto" }}
             textAlign="center"
-            maxWidth="1200px"
+            maxWidth="750px"
             px={2}
           >
             <Heading color="custom.black">
-              No-code AI platform that empowers you to create, customize, and
-              deploy AI agents in Minutes
+              Create, customize, and deploy AI agents in minutes
             </Heading>
           </Box>
           <Box
