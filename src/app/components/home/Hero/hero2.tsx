@@ -3,6 +3,7 @@ import Heading from "../../typeface/Heading";
 import BodyText from "../../typeface/BodyText";
 import ButtonComponent from "../../common/ButtonComponent";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero2() {
   return (
@@ -47,11 +48,13 @@ function Hero2() {
 
           <Box display="flex" flexDirection="row" gap={2} pt={2}>
             <ButtonComponent label="Book a demo" />
-            <ButtonComponent
-              label="Contact us"
-              color="transparent"
-              border="1px solid"
-            />
+            <Link href="/contact-us">
+              <ButtonComponent
+                label="Contact us"
+                color="transparent"
+                border="1px solid"
+              />
+            </Link>
           </Box>
         </Box>
         <Box display="flex" flexWrap="wrap" justifyContent="center">
