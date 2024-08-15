@@ -84,7 +84,7 @@ export const ContactUsForm = () => {
             initialValues={initialValues}
             validationSchema={ContactFormSchema}
             enableReinitialize
-            onSubmit={async (values) => {
+            onSubmit={async (values, { resetForm }) => {
               setLoading(true);
               const response = await fetch("/api/submitForm", {
                 method: "POST",
@@ -96,7 +96,7 @@ export const ContactUsForm = () => {
 
               if (response.ok) {
                 showToast("Form submitted successfully", "success");
-
+                resetForm();
                 setLoading(false);
               } else {
                 showToast("Something went wrong", "error");
