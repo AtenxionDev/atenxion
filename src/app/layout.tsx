@@ -14,6 +14,7 @@ const figtree = Figtree({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Atenxion AI",
   description: "Atenxion AI",
+  icons: "/assets/atenxion-small.svg",
 };
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="shortcut icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
