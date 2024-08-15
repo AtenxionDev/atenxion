@@ -26,28 +26,28 @@ const data = [
     id: "panel1",
     title: "2:  Customize Behavior & Appearance",
     description:
-      "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
+      "Tailor your AI agent to align with your brand by adding logos, selecting color schemes, and setting the conversational tone with custom instructions, ensuring it reflects your brand’s personality. ",
     image: "/assets/agent/step2.svg",
   },
   {
     id: "panel2",
     title: "3:  Define Actions & Conversation Starters",
     description:
-      "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
+      "Empower your AI agent with custom actions for dynamic, personalized responses. Set up conversational starters to help users easily engage and get the information they need quickly. ",
     image: "/assets/agent/step3.svg",
   },
   {
     id: "panel3",
     title: "4:  Embed or Integrate with Your Applications",
     description:
-      "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
+      "Effortlessly embed a custom chat widget into your website or integrate the AI agent with your existing applications via our APIs. Deliver seamless, AI-powered support across all customer touchpoints. ",
     image: "/assets/agent/step4.png",
   },
   {
     id: "panel4",
     title: "5:  Monitor Conversations & Gain Insights",
     description:
-      "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
+      "Track and analyze your AI agent's interactions with real-time insights and performance data. Continuously refine your strategies, optimize outcomes, and enhance customer satisfaction.",
     image: "/assets/agent/step5.svg",
   },
 ];
