@@ -10,11 +10,11 @@ function EmpowerAspects() {
     <Box
       display="flex"
       flexDirection={{ xs: "column", lg: "row" }}
-      justifyContent={{ xs: "center", lg: "space-around" }}
+      justifyContent={{ xs: "center", lg: "space-between" }}
       alignItems={"center"}
     >
       <Box
-        width={{ xs: "80%", lg: "25%" }}
+        width={{ xs: "100%", lg: "30%" }}
         textAlign={{ xs: "center", lg: "left" }}
         mb={{ xs: 2, lg: 0 }}
       >
