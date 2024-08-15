@@ -79,6 +79,8 @@ export const InputComponent = ({
           value={value}
           onChange={handleChange}
           disabled={disabled}
+          className="customFont"
+
           // required={required}
         />
       </Box>

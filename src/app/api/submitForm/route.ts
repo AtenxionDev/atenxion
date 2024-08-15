@@ -5,15 +5,14 @@ import ejs from "ejs";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  const { customerName, email, code, phone, company, designation } =
-    await req.json();
+  const { name, email, code, phone, company, designation } = await req.json();
 
-  if (!customerName || !email || !phone) {
+  if (!name || !email || !phone) {
     return new Response("Missing required fields", { status: 400 });
   }
 
   const userInfo = {
-    customerName,
+    name,
     company,
     phone: code + phone,
     email,
@@ -21,13 +20,13 @@ export async function POST(req: NextRequest) {
   };
 
   const customerHTML = getHtmlContent({
-    customerName,
+    name,
     date: new Date().toLocaleString(),
     isAdmin: false,
   });
 
   const adminHTML = getHtmlContent({
-    customerName: "Admin",
+    name: "Admin",
     date: new Date().toLocaleString(),
     isAdmin: true,
     userInfo,
@@ -77,16 +76,16 @@ export async function POST(req: NextRequest) {
 }
 
 const getHtmlContent = ({
-  customerName,
+  name,
   date,
   isAdmin,
   userInfo,
 }: {
-  customerName: string;
+  name: string;
   date: string;
   isAdmin: boolean;
   userInfo?: {
-    customerName: string;
+    name: string;
     company: string;
     email: string;
     phone: string;
@@ -100,7 +99,7 @@ const getHtmlContent = ({
   const templateContent = fs.readFileSync(templatePath, "utf8");
 
   return ejs.render(templateContent, {
-    customerName,
+    name,
     date,
     isAdmin,
     userInfo,

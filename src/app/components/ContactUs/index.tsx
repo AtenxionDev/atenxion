@@ -124,7 +124,6 @@ export const ContactUsForm = () => {
                   marginTop: "20px",
                 }}
               >
-                {console.log(errors)}
                 <InputComponent
                   id="name"
                   label="Name"
