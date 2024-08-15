@@ -104,7 +104,7 @@ const UseCase = () => {
               }
             />
             <UseCaseCard
-              title="AI copilots tailored to your industry"
+              title="AI Copilots tailored to your industry"
               description="Offering tailored support, real-time assistance, and seamless interactions in Finance, Telco, Real Estate, Healthcare, and beyond."
               height="100%"
               width="40%"
