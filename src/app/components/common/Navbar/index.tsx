@@ -125,9 +125,9 @@ function Navbar({ updateNavState = true }: IProps) {
             </Box>
           </a>
         ))}
-        <a href="#contact" style={{ textDecoration: "none" }}>
+        <Link href="/contact-us">
           <ButtonComponent label="Contact us" color={"primary.main"} />
-        </a>
+        </Link>
       </Box>
     </Box>
   );

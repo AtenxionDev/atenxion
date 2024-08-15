@@ -89,7 +89,7 @@ const UseCase = () => {
                 }}
               >
                 <Image
-                  src={"/assets/knowledge.png"}
+                  src={"/assets/tailor.svg"}
                   objectFit="contain"
                   layout="responsive"
                   style={{ aspectRatio: "auto" }}
