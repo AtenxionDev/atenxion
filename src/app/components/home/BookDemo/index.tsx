@@ -63,14 +63,15 @@ function BookDemo() {
               alignItems="center"
               justifyContent="center"
             >
-              <ButtonComponent label="Book a demo" />
-              <Link href="/contact-us">
-                <ButtonComponent
-                  label="Contact us"
-                  color="transparent"
-                  border="1px solid"
-                />
+              <Link href="/book-a-demo">
+                <ButtonComponent label="Book a demo" />
               </Link>
+
+              <a
+                href={`mailto:${process.env.NEXT_PUBLIC_MAILTO_EMAIL}?subject=Subject%20Here&body=Message%20Here`}
+              >
+                <ButtonComponent label="Mail To" />
+              </a>
             </Box>
           </Box>
         </Box>

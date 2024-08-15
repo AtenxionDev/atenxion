@@ -10,80 +10,39 @@ import ButtonComponent from "../common/ButtonComponent";
 import toast, { Toaster } from "react-hot-toast";
 import { toastOptions } from "@/app/data/toast";
 import { showToast } from "@/app/utils/handleError";
+import { Formik } from "formik";
+import * as Yup from "yup";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 export const ContactUsForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [formData, setFormData] = useState({
-    customerName: "",
+
+  const initialValues = {
+    name: "",
     email: "",
     code: "+95",
     phone: "",
     company: "",
     designation: "",
+  };
+
+  const phoneRegExp =
+    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+  const ContactFormSchema = Yup.object().shape({
+    name: Yup.string()
+      .required("Name is required")
+      .min(3, "Name must be at least 3 characters long")
+      .max(30, "Name must be at most 30 characters long"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    // designation: Yup.string()
+    //   .required("Designation is required")
+    //   .max(150, "Designation must be at most 150 characters long"),
+    // company: Yup.string().required("Company name is required"),
   });
-
-  const isBtnDisabled = !(
-    formData.customerName.trim().length > 0 &&
-    formData.email.trim().length > 0 &&
-    formData.phone.trim().length > 0
-  );
-
-  const isValidEmail = (email: string) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
-
-  const validatePhoneNumber = (phone: string) => {
-    const phonePattern = /^\d+$/;
-    return phonePattern.test(phone) && phone.length >= 6 && phone.length <= 15;
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { id, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [id]: value }));
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-
-    if (!isValidEmail(formData.email)) {
-      showToast("Please enter a valid email address", "error");
-      setLoading(false);
-      return;
-    }
-
-    if (!validatePhoneNumber(formData.phone)) {
-      showToast("Please enter a valid phone number", "error");
-      setLoading(false);
-      return;
-    }
-
-    const response = await fetch("/api/submitForm", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-    if (response.ok) {
-      showToast("Form submitted successfully", "success");
-      setFormData({
-        customerName: "",
-        email: "",
-        code: "+95",
-        phone: "",
-        company: "",
-        designation: "",
-      });
-      setLoading(false);
-    } else {
-      showToast("Something went wrong", "error");
-      setLoading(false);
-    }
-  };
 
   return (
     <Box
@@ -121,86 +80,136 @@ export const ContactUsForm = () => {
         </BodyText>
 
         <Box width={{ xs: "300px", sm: "450px", md: "520px" }}>
-          <form
-            onSubmit={handleSubmit}
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "start",
-              gap: "20px",
-              marginTop: "20px",
+          <Formik
+            initialValues={initialValues}
+            validationSchema={ContactFormSchema}
+            enableReinitialize
+            onSubmit={async (values) => {
+              setLoading(true);
+              const response = await fetch("/api/submitForm", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values),
+              });
+
+              if (response.ok) {
+                showToast("Form submitted successfully", "success");
+
+                setLoading(false);
+              } else {
+                showToast("Something went wrong", "error");
+                setLoading(false);
+              }
             }}
           >
-            <InputComponent
-              id="customerName"
-              label="Name"
-              value={formData.customerName}
-              handleChange={handleChange}
-              required
-            />
-            <InputComponent
-              id="designation"
-              label="Designation"
-              value={formData.designation}
-              handleChange={handleChange}
-            />
-            <InputComponent
-              type="email"
-              id="email"
-              label="Business email"
-              value={formData.email}
-              handleChange={handleChange}
-              required
-            />
-            <InputComponent
-              type="phone"
-              id="phone"
-              label="Phone number"
-              code={formData.code}
-              value={formData.phone}
-              handleChange={handleChange}
-              required
-            />
-
-            <InputComponent
-              id="company"
-              label="Company Name"
-              value={formData.company}
-              handleChange={handleChange}
-            />
-
-            <Box
-              display={"flex"}
-              justifyContent={"space-between"}
-              alignItems={"center"}
-              gap={3}
-              width={"100%"}
-            >
-              <ButtonComponent
-                width="170px"
-                height="40px"
-                label="Request a demo"
-                onClick={handleSubmit}
-                loading={loading}
-                disabled={isBtnDisabled}
-              />
-
-              <a
-                href={`mailto:${process.env.NEXT_PUBLIC_MAILTO_EMAIL}?subject=Subject%20Here&body=Message%20Here`}
+            {({
+              values,
+              handleSubmit,
+              handleChange,
+              errors,
+              touched,
+              setFieldValue,
+            }) => (
+              <form
+                onSubmit={handleSubmit}
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "start",
+                  gap: "20px",
+                  marginTop: "20px",
+                }}
               >
-                <ButtonComponent
-                  width="100px"
-                  height="40px"
-                  label="Mail To"
-                  color="#212121"
-                  border="1px solid #212121"
-                  textColor="white"
+                {console.log(errors)}
+                <InputComponent
+                  id="name"
+                  label="Name"
+                  value={values.name}
+                  handleChange={handleChange}
+                  required
+                  errors={errors.name}
+                  touched={touched.name}
                 />
-              </a>
-            </Box>
-          </form>
+                <InputComponent
+                  id="designation"
+                  label="Designation"
+                  value={values.designation}
+                  handleChange={handleChange}
+                  errors={errors.designation}
+                  touched={touched.designation}
+                />
+                <InputComponent
+                  type="email"
+                  id="email"
+                  label="Business email"
+                  value={values.email}
+                  handleChange={handleChange}
+                  required
+                  errors={errors.email}
+                  touched={touched.email}
+                />
+
+                <Box
+                  display={"flex"}
+                  flexDirection={"column"}
+                  gap={1}
+                  width={"100%"}
+                >
+                  <BodyText variant="medium" weight="medium">
+                    Phone
+                  </BodyText>
+                  <PhoneInput
+                    international
+                    defaultCountry="MM"
+                    value={values.phone}
+                    onChange={(newVal) => setFieldValue("phone", newVal)}
+                  />
+                </Box>
+
+                {/* <InputComponent
+                  type="phone"
+                  id="phone"
+                  label="Phone number"
+                  code={values.code}
+                  value={values.phone}
+                  handleChange={handleChange}
+                  required
+                  errors={errors.phone}
+                  touched={touched.phone}
+                /> */}
+
+                <InputComponent
+                  id="company"
+                  label="Company Name"
+                  value={values.company}
+                  handleChange={handleChange}
+                  required
+                  errors={errors.company}
+                  touched={touched.company}
+                />
+
+                <Box
+                  display={"flex"}
+                  justifyContent={"flex-end"}
+                  alignItems={"center"}
+                  gap={3}
+                  width={"100%"}
+                >
+                  <ButtonComponent
+                    width="170px"
+                    height="40px"
+                    label="Request a demo"
+                    onClick={handleSubmit}
+                    loading={loading}
+                  />
+                </Box>
+              </form>
+            )}
+          </Formik>
         </Box>
       </Box>
     </Box>

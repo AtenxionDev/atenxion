@@ -131,8 +131,8 @@ function Navbar({ updateNavState = true }: IProps) {
               </Box>
             </a>
           ))}
-          <Link href="/contact-us">
-            <ButtonComponent label="Contact us" color={"primary.main"} />
+          <Link href="/book-a-demo">
+            <ButtonComponent label="Book a demo" color={"primary.main"} />
           </Link>
         </Box>
       </Box>

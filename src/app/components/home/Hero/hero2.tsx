@@ -47,13 +47,8 @@ function Hero2() {
           </BodyText>
 
           <Box display="flex" flexDirection="row" gap={2} pt={2}>
-            <ButtonComponent label="Book a demo" />
-            <Link href="/contact-us">
-              <ButtonComponent
-                label="Contact us"
-                color="transparent"
-                border="1px solid"
-              />
+            <Link href="/book-a-demo">
+              <ButtonComponent label="Book a demo" />
             </Link>
           </Box>
         </Box>

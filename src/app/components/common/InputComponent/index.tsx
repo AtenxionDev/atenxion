@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
-import React from "react";
+import { Box, Typography } from "@mui/material";
+import { FormikErrors, FormikTouched } from "formik";
 import BodyText from "../../typeface/BodyText";
 
 interface InputComponentProps {
@@ -11,6 +11,8 @@ interface InputComponentProps {
   disabled?: boolean;
   required?: boolean;
   code?: string;
+  errors?: any;
+  touched?: FormikTouched<any> | any;
 }
 
 export const InputComponent = ({
@@ -22,6 +24,8 @@ export const InputComponent = ({
   disabled,
   required,
   code,
+  errors,
+  touched,
 }: InputComponentProps) => {
   return (
     <Box display={"flex"} flexDirection={"column"} gap={1} width={"100%"}>
@@ -34,6 +38,8 @@ export const InputComponent = ({
           <Box width={70}>
             <input
               maxLength={4}
+              name={id}
+              id="code"
               style={{
                 cursor: "pointer",
                 textAlign: "center",
@@ -52,7 +58,6 @@ export const InputComponent = ({
               }}
               type="text"
               value={code}
-              id="code"
               onChange={handleChange}
             />
           </Box>
@@ -70,13 +75,18 @@ export const InputComponent = ({
           }}
           type={type || "text"}
           id={id}
+          name={id}
           value={value}
           onChange={handleChange}
           disabled={disabled}
-          required={required}
-          maxLength={id === "phone" ? 10 : 150}
+          // required={required}
         />
       </Box>
+      {errors && touched && (
+        <Typography fontSize="12px" color="red" mx="2px">
+          {errors}
+        </Typography>
+      )}
     </Box>
   );
 };

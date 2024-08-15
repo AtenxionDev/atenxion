@@ -4,3 +4,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.PhoneInput {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+}
+.PhoneInputInput {
+  outline: none;
+  border: none;
+}
