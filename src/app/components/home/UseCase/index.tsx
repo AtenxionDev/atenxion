@@ -3,7 +3,6 @@ import React from "react";
 import UseCaseCard from "../../UseCaseCard";
 import Image from "next/image";
 import Heading from "../../typeface/Heading";
-import SubHeading from "../../typeface/SubHeading";
 
 const UseCase = () => {
   return (
@@ -19,7 +18,10 @@ const UseCase = () => {
         alignItems: "center",
       }}
     >
-      <Box maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}>
+      <Box
+        maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}
+        id="usecases"
+      >
         <Box textAlign="center">
           <Heading color="custom.black">
             Learn how Atenxion helping through

@@ -3,21 +3,24 @@ import { Box } from "@mui/material";
 import BodyText from "../../typeface/BodyText";
 import SubHeading from "../../typeface/SubHeading";
 import { navigation } from "@/app/data/navigation";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const documentation = [
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/company/atenxion",
+    icon: <FaLinkedin />,
   },
   {
     title: "Facebook",
     link: "https://www.facebook.com/Atenxion",
+    icon: <FaFacebook />,
   },
 ];
 
 const contacts = [
-  { title: "win@brillar.io", link: "/" },
-  { title: "+65 96322602", link: "/" },
+  { title: "win@atenxion.ai", link: "mailto:win@atenxion.ai" },
+  { title: "+65 96322602", link: "tel:+65 96322602" },
 ];
 
 function Footer() {
@@ -37,10 +40,21 @@ function Footer() {
           <Box
             display={"flex"}
             flexDirection={"column"}
-            justifyContent={"space-between"}
+            justifyContent={{ xs: "start", lg: "space-between" }}
+            gap={{ xs: 2, lg: 0 }}
             flex={1}
           >
-            <SubHeading>Atenxion</SubHeading>
+            <Box
+              display={"flex"}
+              flexDirection={"column"}
+              justifyContent={"space-between"}
+              gap={1}
+            >
+              <SubHeading>Atenxion</SubHeading>
+              <BodyText variant="medium">
+                Empowering Enterprises with No-Code AI
+              </BodyText>
+            </Box>
             <Box sx={{ opacity: 0.5 }}>
               <BodyText variant="medium"> © 2024 Atenxion </BodyText>
             </Box>
@@ -77,18 +91,29 @@ function Footer() {
                 Socials
               </BodyText>
               {documentation.map((item) => (
-                <BodyText
+                <Box
                   key={item.title}
-                  variant="medium"
-                  color="custom.black"
+                  display={"flex"}
+                  alignItems={"center"}
+                  gap={"4px"}
+                  height={"20px"}
                 >
-                  <a
-                    href={item.link}
-                    style={{ color: "inherit", textDecoration: "none" }}
+                  <span>{item.icon}</span>
+
+                  <BodyText
+                    key={item.title}
+                    variant="medium"
+                    color="custom.black"
                   >
-                    {item.title}
-                  </a>
-                </BodyText>
+                    <a
+                      href={item.link}
+                      style={{ color: "inherit", textDecoration: "none" }}
+                      target="_blank"
+                    >
+                      {item.title}
+                    </a>
+                  </BodyText>
+                </Box>
               ))}
             </Box>
 

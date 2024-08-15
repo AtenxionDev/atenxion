@@ -29,6 +29,7 @@ function EmpowerAspects() {
         flexWrap={"wrap"}
         justifyContent="center"
         gap={{ xs: 2, lg: 6 }}
+        id="features"
       >
         <AspectComponent
           img1="/assets/features/leadgenFrame.svg"

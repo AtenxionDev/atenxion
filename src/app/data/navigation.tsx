@@ -22,7 +22,7 @@ export const navigation: Navigation[] = [
     link: "/#features",
   },
   {
-    title: "Usecases",
+    title: "Use Cases",
     link: "/#usecases",
   },
   //   {

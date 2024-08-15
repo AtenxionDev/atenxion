@@ -41,7 +41,7 @@ const data = [
     title: "4:  Embed or Integrate with Your Applications",
     description:
       "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
-    image: "/assets/agent/step4.svg",
+    image: "/assets/agent/step4.png",
   },
   {
     id: "panel4",
@@ -62,7 +62,7 @@ const AgentTraining = () => {
       setImage(panel.image);
     };
   return (
-    <Layout bgColor="custom.cream">
+    <Layout bgColor="custom.cream" id="howItWorks">
       <Box display="flex" alignItems="center" justifyContent="center">
         <Box
           width="100%"
@@ -73,7 +73,6 @@ const AgentTraining = () => {
             alignItems: "center",
             py: { xs: "20px", md: "50px" },
           }}
-          id="howItWorks"
           maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
         >
           <Box width={{ xs: "auto" }} textAlign="center">
