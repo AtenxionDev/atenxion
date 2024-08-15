@@ -28,6 +28,8 @@ function BookDemo() {
             position="absolute"
             display="flex"
             left={{ xs: "0", sm: "14%", md: "22%", lg: "29%" }}
+            // bottom={{ sm: "-25px", md: "default" }}
+            bottom={{ xs: "-37%", sm: "-41%", md: "auto" }}
           >
             <Image
               src="/assets/person.svg"
