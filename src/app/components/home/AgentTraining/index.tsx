@@ -41,7 +41,7 @@ const data = [
     title: "4:  Embed or Integrate with Your Applications",
     description:
       "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
-    image: "/assets/agent/step4.svg",
+    image: "/assets/agent/step4.png",
   },
   {
     id: "panel4",
