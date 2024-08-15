@@ -63,7 +63,25 @@ const AgentTraining = () => {
     };
   return (
     <Layout bgColor="custom.cream">
-      <Box display="flex" alignItems="center" justifyContent="center">
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        position="relative"
+      >
+        <Box
+          id="howItWorks"
+          sx={{
+            height: "200px",
+            position: "absolute",
+            bgcolor: "red",
+            top: 0,
+            marginTop: "-80px",
+            opacity: 0,
+          }}
+        >
+          hello
+        </Box>
         <Box
           width="100%"
           sx={{
@@ -74,7 +92,6 @@ const AgentTraining = () => {
             py: { xs: "20px", md: "50px" },
             px: 0,
           }}
-          id="howItWorks"
           maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
         >
           <Box width={{ xs: "auto" }} textAlign="center">
