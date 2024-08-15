@@ -97,7 +97,7 @@ const AgentTraining = () => {
           <Box
             width={{ xs: "auto" }}
             textAlign="center"
-            maxWidth="750px"
+            maxWidth={{ lg: "750px", xl: "1000px" }}
             px={2}
           >
             <Heading color="custom.black">

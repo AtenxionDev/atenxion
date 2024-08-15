@@ -32,11 +32,20 @@ const UseCase = () => {
       >
         hello
       </Box>
-      <Box maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}>
-        <Box textAlign="center">
+      <Box
+        maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}
+        display="flex"
+        flexDirection="column"
+        alignItems={"center"}
+      >
+        <Box
+          textAlign="center"
+          maxWidth={{ lg: "800px", xl: "1200px" }}
+          display="flex"
+          alignItems="center"
+        >
           <Heading color="custom.black">
-            Learn how Atenxion is helping through
-            <br /> across different use cases
+            Explore how Gen AI can transform different aspects of your business
           </Heading>
         </Box>
 

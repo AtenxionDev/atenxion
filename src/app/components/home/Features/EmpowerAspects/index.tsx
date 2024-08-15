@@ -14,7 +14,7 @@ function EmpowerAspects() {
       alignItems={"center"}
     >
       <Box
-        width={{ xs: "100%", lg: "30%" }}
+        width={{ xs: "100%", lg: "30%", xl: "40%" }}
         textAlign={{ xs: "center", lg: "left" }}
         mb={{ xs: 2, lg: 0 }}
       >
