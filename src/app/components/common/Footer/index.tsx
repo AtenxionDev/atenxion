@@ -4,6 +4,7 @@ import BodyText from "../../typeface/BodyText";
 import SubHeading from "../../typeface/SubHeading";
 import { navigation } from "@/app/data/navigation";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 const documentation = [
   {
@@ -50,7 +51,15 @@ function Footer() {
               justifyContent={"space-between"}
               gap={1}
             >
-              <SubHeading>Atenxion</SubHeading>
+              {/* <SubHeading>Atenxion</SubHeading> */}
+              <Box>
+                <Image
+                  src={"/assets/atenxion-black.png"}
+                  width={200}
+                  height={40}
+                  alt="atenxion"
+                />
+              </Box>
               <BodyText variant="medium">
                 No Code Gen AI for Enterprise
               </BodyText>
