@@ -62,8 +62,26 @@ const AgentTraining = () => {
       setImage(panel.image);
     };
   return (
-    <Layout bgColor="custom.cream" id="howItWorks">
-      <Box display="flex" alignItems="center" justifyContent="center">
+    <Layout bgColor="custom.cream">
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        position="relative"
+      >
+        <Box
+          id="howItWorks"
+          sx={{
+            height: "200px",
+            position: "absolute",
+            bgcolor: "red",
+            top: 0,
+            marginTop: "-80px",
+            opacity: 0,
+          }}
+        >
+          hello
+        </Box>
         <Box
           width="100%"
           sx={{
@@ -72,6 +90,7 @@ const AgentTraining = () => {
             justifyContent: "center",
             alignItems: "center",
             py: { xs: "20px", md: "50px" },
+            px: 0,
           }}
           maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
         >
@@ -90,11 +109,13 @@ const AgentTraining = () => {
               justifyContent: { xs: "center", md: "space-between" },
               alignItems: "center",
               gap: { xs: "20px", md: "40px", lg: "60px" },
-              px: { xs: 4, md: 0 },
-              pl: { xs: 0, xl: 6 },
+              px: { xs: 4, sm: 0, md: 0 },
             }}
           >
-            <Box minWidth={{ lg: "500px", md: "400px", xs: "auto" }}>
+            <Box
+              minWidth={{ lg: "500px", md: "400px", xs: "auto" }}
+              pl={{ xs: 0, xl: 6 }}
+            >
               <Image
                 src={image}
                 alt="steps"

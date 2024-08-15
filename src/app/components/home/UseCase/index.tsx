@@ -16,12 +16,23 @@ const UseCase = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
       }}
     >
       <Box
-        maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}
         id="usecases"
+        sx={{
+          height: "200px",
+          position: "absolute",
+          bgcolor: "red",
+          top: 0,
+          marginTop: "-80px",
+          opacity: 0,
+        }}
       >
+        hello
+      </Box>
+      <Box maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}>
         <Box textAlign="center">
           <Heading color="custom.black">
             Learn how Atenxion helping through
@@ -101,7 +112,7 @@ const UseCase = () => {
                   }}
                 >
                   <Image
-                    src={"/assets/knowledge.png"}
+                    src={"/assets/tailor.svg"}
                     objectFit="contain"
                     layout="responsive"
                     style={{ aspectRatio: "auto" }}

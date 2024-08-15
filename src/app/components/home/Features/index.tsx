@@ -10,7 +10,20 @@ import EmpowerAspects from "./EmpowerAspects";
 function Features() {
   return (
     <Layout>
-      <Box>
+      <Box position="relative">
+        <Box
+          id="features"
+          sx={{
+            height: "200px",
+            position: "absolute",
+            bgcolor: "red",
+            top: 0,
+            marginTop: "-80px",
+            opacity: 0,
+          }}
+        >
+          hello
+        </Box>
         <Box display="flex" justifyContent="center">
           <Box maxWidth={{ lg: "1200px", xl: "1400px" }}>
             <EmpowerAspects />

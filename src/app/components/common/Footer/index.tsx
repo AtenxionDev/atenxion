@@ -98,7 +98,7 @@ function Footer() {
                   gap={"4px"}
                   height={"20px"}
                 >
-                  <span>{item.icon}</span>
+                  <span style={{ marginBottom: "-4px" }}>{item.icon}</span>
 
                   <BodyText
                     key={item.title}
