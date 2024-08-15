@@ -74,7 +74,7 @@ const AgentTraining = () => {
             py: { xs: "20px", md: "50px" },
           }}
           id="howItWorks"
-          maxWidth={{ xs: "100%", xl: "1400px" }}
+          maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
         >
           <Box width={{ xs: "auto" }} textAlign="center">
             <Heading color="custom.black">
@@ -88,10 +88,11 @@ const AgentTraining = () => {
               width: "100%",
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
-              justifyContent: "center",
+              justifyContent: { xs: "center", md: "space-between" },
               alignItems: "center",
               gap: { xs: "20px", md: "40px", lg: "60px" },
-              px: 4,
+              px: { xs: 4, md: 0 },
+              pl: { xs: 0, xl: 6 },
             }}
           >
             <Box minWidth={{ lg: "500px", md: "400px", xs: "auto" }}>
@@ -104,7 +105,7 @@ const AgentTraining = () => {
                 style={{ maxWidth: "500px" }}
               />
             </Box>
-            <Box width={{ xs: "100%", md: "70%", lg: "40%" }}>
+            <Box width={{ xs: "100%", md: "50%", lg: "50%" }}>
               <AgentTrainingAccordion
                 data={data}
                 handleChange={handleChange}
