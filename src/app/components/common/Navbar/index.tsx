@@ -7,6 +7,7 @@ import { useScrollPositions } from "@/app/hooks/useScrollPositions";
 import BodyText from "../../typeface/BodyText";
 import ButtonComponent from "../ButtonComponent";
 import Link from "next/link";
+import Image from "next/image";
 
 interface IProps {
   updateNavState?: boolean;
@@ -91,13 +92,21 @@ function Navbar({ updateNavState = true }: IProps) {
         {/* logo */}
         <Box mx={{ xs: 4 }}>
           <Link href="/" style={{ textDecoration: "none" }}>
-            <BodyText
+            <Image
+              src={
+                scrolled ? "/assets/atenxion-black.png" : "/assets/atenxion.png"
+              }
+              width={215}
+              height={40}
+              alt="atenxion"
+            />
+            {/* <BodyText
               variant="large"
               color={!show ? " #fff" : "secondary.main"}
               weight={!show ? "regular" : "bold"}
             >
               Atenxion
-            </BodyText>
+            </BodyText> */}
           </Link>
         </Box>
 
