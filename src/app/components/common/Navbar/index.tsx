@@ -93,9 +93,7 @@ function Navbar({ updateNavState = true }: IProps) {
         <Box mx={{ xs: 4 }}>
           <Link href="/" style={{ textDecoration: "none" }}>
             <Image
-              src={
-                scrolled ? "/assets/atenxion-black.png" : "/assets/atenxion.png"
-              }
+              src={show ? "/assets/atenxion-black.png" : "/assets/atenxion.png"}
               width={215}
               height={40}
               alt="atenxion"
