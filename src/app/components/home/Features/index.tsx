@@ -11,18 +11,19 @@ function Features() {
   return (
     <Layout>
       <Box id="features">
-        <EmpowerAspects />
-
         <Box display="flex" justifyContent="center">
-          <Box className="container">
+          <Box maxWidth={{ lg: "1200px", xl: "1400px" }}>
+            <EmpowerAspects />
             <Box
               display="flex"
               alignItems="center"
-              justifyContent="center"
-              gap={{ md: 8, xs: 4 }}
+              justifyContent={{ lg: "flex-start", xs: "center" }}
+              gap={{ xs: 4, md: 4, lg: 3, xl: 10 }}
+              rowGap={{ xs: 4, md: 4, lg: 4, xl: 8 }}
               flexWrap="wrap"
               width="100%"
-              py={{ md: 8, xs: 4 }}
+              pt={{ md: 8, sm: 6, xs: 4 }}
+              pb={{ md: 8, xs: 0 }}
             >
               {features.map((feature) => (
                 <FeatureComponent feature={feature} key={feature.title} />

@@ -5,20 +5,27 @@ import Image from "next/image";
 
 function Integration() {
   return (
-    <Box display="flex" justifyContent="center" py={{ lg: 8, md: 6, xs: 6 }}>
+    <Box display="flex" justifyContent="center" py={{ lg: 8, md: 6, xs: 2 }}>
       <Box
-        width={{ lg: "1000px", md: "85%", xs: "100%" }}
+        maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}
         flexDirection={{ md: "row", xs: "column" }}
+        width="100%"
         display="flex"
         alignItems="center"
         justifyContent="space-between"
         flexWrap="wrap"
       >
         <Box
-          maxWidth={{ lg: "500px", md: "450px", sm: "70%", xs: "90%" }}
+          maxWidth={{
+            xl: "600px",
+            lg: "500px",
+            md: "410px",
+            sm: "70%",
+            xs: "90%",
+          }}
           textAlign={{ md: "revert", xs: "center" }}
         >
-          <Heading color="black">
+          <Heading color="custom.black">
             Empower your AI <br /> agents with any data
           </Heading>
           <BodyText variant="medium" my={3}>
@@ -30,12 +37,13 @@ function Integration() {
           </BodyText>
         </Box>
 
-        <Box>
+        <Box px={{ md: 0, xs: 4 }} width={{ md: "350px", lg: "auto" }}>
           <Image
             src="/assets/integration-new.svg"
             alt="integration"
-            width={350}
+            width={550}
             height={450}
+            style={{ maxWidth: "100%" }}
           />
         </Box>
       </Box>

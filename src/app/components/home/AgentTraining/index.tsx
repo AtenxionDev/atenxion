@@ -5,6 +5,7 @@ import SubHeading from "../../typeface/SubHeading";
 import AgentTrainingAccordion from "../../AgentTrainingAccordion";
 import Layout from "../../common/Layout";
 import Image from "next/image";
+import Heading from "../../typeface/Heading";
 
 export interface PanelData {
   id: string;
@@ -57,59 +58,59 @@ const AgentTraining = () => {
   const handleChange =
     (panel: PanelData) =>
     (event: React.SyntheticEvent, isExpanded: boolean) => {
-      console.log(panel);
       setExpanded(isExpanded ? panel.id : false);
       setImage(panel.image);
     };
-  console.log(image);
   return (
     <Layout bgColor="custom.cream">
-      <Box
-        sx={{
-          minHeight: "100dvh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-        id="howItWorks"
-      >
-        <SubHeading width={{ xs: "auto" }} textAlign="center">
-          Learn how Atenxion quickly <br /> understands and trains your agent
-        </SubHeading>
+      <Box display="flex" alignItems="center" justifyContent="center">
         <Box
+          width="100%"
           sx={{
-            mt: { xs: "30px", md: "60px" },
-            width: "100%",
             display: "flex",
-            flexDirection: { xs: "column", md: "row" },
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: { xs: "60px", md: "40px", lg: "60px" },
-            px: 4,
+            py: { xs: "20px", md: "50px" },
           }}
+          id="howItWorks"
+          maxWidth={{ xs: "100%", xl: "1400px" }}
         >
-          {/* <Box
-            width={{ xs: "100%", md: "50%" }}
-            height={{ xs: "300px", md: "500px" }}
-            mb={{ xs: 12, sm: 18, md: 0 }}
-            alignItems={{ xs: "center" }}
-          > */}
-          <Image
-            src={image}
-            alt="steps"
-            width={400}
-            height={450}
-            layout="responsive"
-            style={{ maxWidth: "500px" }}
-          />
-          {/* </Box> */}
-          <Box width={{ xs: "100%", md: "70%", lg: "40%" }}>
-            <AgentTrainingAccordion
-              data={data}
-              handleChange={handleChange}
-              expanded={expanded}
-            />
+          <Box width={{ xs: "auto" }} textAlign="center">
+            <Heading color="custom.black">
+              Learn how Atenxion quickly <br /> understands and trains your
+              agent
+            </Heading>
+          </Box>
+          <Box
+            sx={{
+              mt: { xs: "30px", md: "60px" },
+              width: "100%",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              justifyContent: "center",
+              alignItems: "center",
+              gap: { xs: "20px", md: "40px", lg: "60px" },
+              px: 4,
+            }}
+          >
+            <Box minWidth={{ lg: "500px", md: "400px", xs: "auto" }}>
+              <Image
+                src={image}
+                alt="steps"
+                width={400}
+                height={450}
+                layout="responsive"
+                style={{ maxWidth: "500px" }}
+              />
+            </Box>
+            <Box width={{ xs: "100%", md: "70%", lg: "40%" }}>
+              <AgentTrainingAccordion
+                data={data}
+                handleChange={handleChange}
+                expanded={expanded}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
