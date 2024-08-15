@@ -11,9 +11,9 @@ function Hero2() {
       bgcolor="white"
       alignContent="center"
       justifyContent="center"
-      height={{ xs: "auto", lg: "100vh", xl: "70vh" }}
+      height={{ xs: "auto", lg: "calc(100vh - 75px)", xl: "70vh" }}
       pb={{ xs: "30px", sm: "50px", md: "90px", lg: "120px" }}
-      pt={{ xs: "30px", sm: "50px", md: "50px", lg: 0, xl: "50px" }}
+      pt={{ xs: "30px", sm: "50px", md: "50px", lg: "120px", xl: "50px" }}
 
       // px={{ xs: "30px", sm: "50px", md: "90px", lg: "120px" }}
     >
