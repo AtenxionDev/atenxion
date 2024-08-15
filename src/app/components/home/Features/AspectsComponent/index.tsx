@@ -47,7 +47,7 @@ function AspectComponent({
       <Box
         display={"flex"}
         flexDirection={"column"}
-        gap={1}
+        gap={2}
         bgcolor={"custom.cream"}
         mt="-1"
         // ml={{ xs: -2, md: 0 }}
@@ -57,7 +57,7 @@ function AspectComponent({
         borderRadius="0px 0px 16px 16px"
         overflow={"hidden"}
       >
-        <BodyText variant="large" weight="semibold">
+        <BodyText variant="large" weight="bold">
           {title}
         </BodyText>
         <BodyText variant="medium" weight="regular">

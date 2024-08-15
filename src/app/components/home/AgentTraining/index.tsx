@@ -41,7 +41,7 @@ const data = [
     title: "4:  Embed or Integrate with Your Applications",
     description:
       "Effortlessly embed a custom chat widget into your website or integrate the AI agent with your existing applications via our APIs. Deliver seamless, AI-powered support across all customer touchpoints. ",
-    image: "/assets/agent/step4.png",
+    image: "/assets/agent/step4.svg",
   },
   {
     id: "panel4",
@@ -94,10 +94,15 @@ const AgentTraining = () => {
           }}
           maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
         >
-          <Box width={{ xs: "auto" }} textAlign="center">
+          <Box
+            width={{ xs: "auto" }}
+            textAlign="center"
+            maxWidth="1200px"
+            px={2}
+          >
             <Heading color="custom.black">
-              Learn how Atenxion quickly <br /> understands and trains your
-              agent
+              No-code AI platform that empowers you to create, customize, and
+              deploy AI agents in Minutes
             </Heading>
           </Box>
           <Box
@@ -107,25 +112,29 @@ const AgentTraining = () => {
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
               justifyContent: { xs: "center", md: "space-between" },
-              alignItems: "center",
-              gap: { xs: "20px", md: "40px", lg: "60px" },
+
+              alignItems: { md: "flex-start", sm: "center" },
+              gap: { xs: "20px", md: "40px", lg: "30px" },
               px: { xs: 4, sm: 0, md: 0 },
             }}
           >
             <Box
-              minWidth={{ lg: "500px", md: "400px", xs: "auto" }}
+              width={{ xl: "650px", lg: "550px", md: "400px", xs: "auto" }}
               pl={{ xs: 0, xl: 6 }}
             >
               <Image
                 src={image}
                 alt="steps"
-                width={400}
-                height={450}
+                width={500}
+                height={600}
                 layout="responsive"
-                style={{ maxWidth: "500px" }}
+                style={{ maxWidth: "600px" }}
               />
             </Box>
-            <Box width={{ xs: "100%", md: "50%", lg: "50%" }}>
+            <Box
+              width={{ xs: "100%", md: "50%", lg: "50%" }}
+              mt={{ xl: "70px", lg: "65px" }}
+            >
               <AgentTrainingAccordion
                 data={data}
                 handleChange={handleChange}

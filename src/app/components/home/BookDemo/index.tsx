@@ -13,7 +13,7 @@ function BookDemo() {
           width="100%"
           display="flex"
           flexDirection="column"
-          bgcolor="secondary.main"
+          bgcolor="#252524"
           boxSizing="border-box"
           height={{ md: "400px", sm: "450px", xs: "500px" }}
           alignItems="center"
@@ -64,13 +64,21 @@ function BookDemo() {
               justifyContent="center"
             >
               <Link href="/book-a-demo">
-                <ButtonComponent label="Book a demo" />
+                <ButtonComponent
+                  label="Book a demo"
+                  color="white"
+                  textColor="black"
+                />
               </Link>
 
               <a
                 href={`mailto:${process.env.NEXT_PUBLIC_MAILTO_EMAIL}?subject=Subject%20Here&body=Message%20Here`}
               >
-                <ButtonComponent label="Mail To" />
+                <ButtonComponent
+                  label="Contact Us"
+                  color="white"
+                  textColor="black"
+                />
               </a>
             </Box>
           </Box>

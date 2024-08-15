@@ -60,8 +60,8 @@ const theme = createTheme({
     // },
     custom: {
       borderDarkBlue: "#293A5E",
-      cream: "#f2efea",
-      black: "#17191C",
+      cream: "#f2f2f2",
+      black: "#252524",
       white: "#ffffff",
       darkGrey: "#d9d9d9",
       grey: "#f8f8f8",

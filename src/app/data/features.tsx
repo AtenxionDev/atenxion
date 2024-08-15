@@ -32,7 +32,7 @@ export const features: Feature[] = [
   {
     title: "Diverse Models Support",
     description:
-      "Choose from a wide range of models, including cloud-based options like GPT-4, Claude, Gemini, and open-source models like Mistral and Llama 3.",
+      "Choose from a wide range of cloud models, like GPT-4, Claude, Gemini, to open-source models like Mistral and Llama 3.",
     icon: "/assets/features/DiverseModelsSupport.svg",
   },
   {

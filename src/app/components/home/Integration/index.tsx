@@ -39,7 +39,7 @@ function Integration() {
 
         <Box px={{ md: 0, xs: 4 }} width={{ md: "350px", lg: "auto" }}>
           <Image
-            src="/assets/integration-new.svg"
+            src="/assets/integration.svg"
             alt="integration"
             width={550}
             height={450}

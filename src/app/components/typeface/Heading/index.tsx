@@ -15,6 +15,7 @@ const Heading = ({
         fontSize: {
           md: "32px",
           lg: "48px",
+          xl: "60px",
           sm: "30px",
           xs: "27px",
         },

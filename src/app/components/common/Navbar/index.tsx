@@ -41,15 +41,18 @@ function Navbar({ updateNavState = true }: IProps) {
       height="75px"
       position="sticky"
       top={0}
-      zIndex={10}
-      bgcolor={!show ? "secondary.main" : "#fff"}
+      zIndex={100}
+      bgcolor="white"
+      // bgcolor={!show ? "secondary.main" : "#fff"}
       display={"flex"}
       justifyContent={"center"}
       // px={{ md: 5, lg: 7 }}
-      boxShadow={{
-        xs: scrolled || show ? "0px 16px 48px 0px rgba(0, 0, 0, 0.02)" : "none",
-      }}
-      border={{ xs: scrolled || show ? "1px solid custom.darkGrey" : "none" }}
+      boxShadow="0px 16px 48px 0px rgba(0, 0, 0, 0.02)"
+      border={{ xs: "1px solid custom.darkGrey", sm: "none" }}
+      // boxShadow={{
+      //   xs: scrolled || show ? "0px 16px 48px 0px rgba(0, 0, 0, 0.02)" : "none",
+      // }}
+      // border={{ xs: scrolled || show ? "1px solid custom.darkGrey" : "none" }}
     >
       <Box
         width="100%"
@@ -72,7 +75,8 @@ function Navbar({ updateNavState = true }: IProps) {
               viewBox="0 0 24 24"
               width="24"
               height="24"
-              fill={!show ? "#fff" : "secondary.main"}
+              fill="white"
+              // fill={!show ? "#fff" : "secondary.main"}
             >
               <path d="M18.3 5.71a1 1 0 00-1.41 0L12 10.59 7.11 5.7a1 1 0 00-1.41 1.41L10.59 12l-4.89 4.89a1 1 0 101.41 1.41L12 13.41l4.89 4.89a1 1 0 001.41-1.41L13.41 12l4.89-4.89a1 1 0 000-1.41z" />
             </svg>
@@ -93,12 +97,13 @@ function Navbar({ updateNavState = true }: IProps) {
         <Box mx={{ xs: 4 }}>
           <Link href="/" style={{ textDecoration: "none" }}>
             <Image
-              src={
-                scrolled || show
-                  ? "/assets/atenxion-black.png"
-                  : "/assets/atenxion.png"
-              }
-              width={215}
+              // src={
+              //   scrolled || show
+              //     ? "/assets/atenxion-black.png"
+              //     : "/assets/atenxion.png"
+              // }
+              src={"/assets/atenxion-black.png"}
+              width={200}
               height={40}
               alt="atenxion"
             />
@@ -120,7 +125,8 @@ function Navbar({ updateNavState = true }: IProps) {
           top={{ xs: "73px" }}
           alignItems={"center"}
           gap={{ xs: 2, lg: "52px" }}
-          bgcolor={{ xs: !show ? "secondary.main" : "#fff", lg: "transparent" }}
+          bgcolor="transparent"
+          // bgcolor={{ xs: !show ? "secondary.main" : "#fff", lg: "transparent" }}
           width={{ xs: "100%", lg: "fit-content" }}
           pb={{ xs: 4, lg: 0 }}
           pr={{ lg: 4 }}
@@ -139,8 +145,10 @@ function Navbar({ updateNavState = true }: IProps) {
               <Box key={item.title} sx={{ cursor: "pointer" }}>
                 <BodyText
                   variant="medium"
-                  color={!show ? " #fff" : "secondary.main"}
-                  weight={!show ? "regular" : "semibold"}
+                  color="custom.black"
+                  weight="semibold"
+                  // color={!show ? " #fff" : "secondary.main"}
+                  // weight={!show ? "regular" : "semibold"}
                 >
                   {item.title}
                 </BodyText>
@@ -148,7 +156,7 @@ function Navbar({ updateNavState = true }: IProps) {
             </a>
           ))}
           <Link href="/book-a-demo">
-            <ButtonComponent label="Book a demo" color={"primary.main"} />
+            <ButtonComponent label="Book a demo" />
           </Link>
         </Box>
       </Box>

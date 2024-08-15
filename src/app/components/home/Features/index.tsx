@@ -30,7 +30,7 @@ function Features() {
             <Box
               display="flex"
               alignItems="center"
-              justifyContent={{ lg: "flex-start", xs: "center" }}
+              justifyContent="center"
               gap={{ xs: 4, md: 4, lg: 3, xl: 10 }}
               rowGap={{ xs: 4, md: 4, lg: 4, xl: 8 }}
               flexWrap="wrap"

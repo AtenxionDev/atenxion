@@ -52,7 +52,7 @@ function Footer() {
             >
               <SubHeading>Atenxion</SubHeading>
               <BodyText variant="medium">
-                Empowering Enterprises with No-Code AI
+                No Code Gen AI for Enterprise
               </BodyText>
             </Box>
             <Box sx={{ opacity: 0.5 }}>

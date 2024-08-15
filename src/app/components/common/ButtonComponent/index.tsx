@@ -20,7 +20,7 @@ function ButtonComponent({
   onClick,
   disabled = false,
   loading = false,
-  color = "primary.main",
+  color = "custom.black",
   textColor = "custom.white",
 }: IProps) {
   return (
@@ -31,9 +31,10 @@ function ButtonComponent({
       disabled={disabled || loading}
       sx={{
         "&:hover": {
-          // backgroundColor: darken(color, 0.15),
+          backgroundColor: color,
           boxShadow: "none !important",
         },
+        backgroundColor: color,
         width: width,
         textTransform: "none",
         height: height || "48px",
@@ -49,7 +50,7 @@ function ButtonComponent({
       {loading ? (
         <CircularProgress color="secondary" size={25} />
       ) : (
-        <BodyText variant="medium" color={textColor}>
+        <BodyText variant="medium" color={textColor} weight="semibold">
           {label}
         </BodyText>
       )}

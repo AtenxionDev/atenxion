@@ -12,8 +12,8 @@ import { CssBaseline } from "@mui/material";
 const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Atenxion AI",
-  description: "Atenxion AI",
+  title: "Atenxion | No Code Gen AI for Enterprise",
+  description: "Atenxion | No Code Gen AI for Enterprise",
   icons: "/assets/atenxion-small.svg",
 };
 

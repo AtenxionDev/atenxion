@@ -46,7 +46,7 @@ export const ContactUsForm = () => {
 
   return (
     <Box
-      bgcolor="secondary.main"
+      bgcolor="custom.cream"
       display={"flex"}
       flexDirection={"column"}
       alignItems={"center"}
@@ -54,7 +54,7 @@ export const ContactUsForm = () => {
       padding={5}
     >
       <Toaster toastOptions={toastOptions} />
-      <SubHeading color="white">
+      <SubHeading>
         Make a booking with us to
         <br />
         empower your businesses
@@ -199,8 +199,8 @@ export const ContactUsForm = () => {
                   width={"100%"}
                 >
                   <ButtonComponent
-                    width="170px"
-                    height="40px"
+                    width="auto"
+                    height="45px"
                     label="Request a demo"
                     onClick={handleSubmit}
                     loading={loading}

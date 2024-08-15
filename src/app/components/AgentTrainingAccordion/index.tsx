@@ -31,7 +31,7 @@ export default function AgentTrainingAccordion({
               boxShadow: "none",
               borderRadius: "8px !important",
               mb: 2,
-              pb: 4,
+              pb: 3,
               borderBottom:
                 expanded === `panel${i}`
                   ? "0.5px solid #293A5E"
@@ -50,7 +50,11 @@ export default function AgentTrainingAccordion({
               aria-controls={`panel${i}-content`}
               id={`panel${i}-header`}
             >
-              <BodyText variant="large" sx={{ width: "33%", flexShrink: 0 }}>
+              <BodyText
+                variant="large"
+                sx={{ width: "33%", flexShrink: 0 }}
+                weight="bold"
+              >
                 {item.title}
               </BodyText>
             </AccordionSummary>
