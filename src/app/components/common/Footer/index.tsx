@@ -19,8 +19,8 @@ const documentation = [
 ];
 
 const contacts = [
-  { title: "win@atenxion.ai", link: "mailto:win@atenxion.ai" },
-  { title: "+65 96322602", link: "tel:+65 96322602" },
+  { title: "sales@atenxion.ai", link: "mailto:sales@atenxion.ai" },
+  { title: "+65 9632 2602", link: "tel:+65 96322602" },
 ];
 
 function Footer() {
