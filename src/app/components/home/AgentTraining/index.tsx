@@ -72,6 +72,7 @@ const AgentTraining = () => {
             justifyContent: "center",
             alignItems: "center",
             py: { xs: "20px", md: "50px" },
+            px: 0,
           }}
           id="howItWorks"
           maxWidth={{ xs: "100%", lg: "1200px", xl: "1400px" }}
@@ -91,11 +92,13 @@ const AgentTraining = () => {
               justifyContent: { xs: "center", md: "space-between" },
               alignItems: "center",
               gap: { xs: "20px", md: "40px", lg: "60px" },
-              px: { xs: 4, md: 0 },
-              pl: { xs: 0, xl: 6 },
+              px: { xs: 4, sm: 0, md: 0 },
             }}
           >
-            <Box minWidth={{ lg: "500px", md: "400px", xs: "auto" }}>
+            <Box
+              minWidth={{ lg: "500px", md: "400px", xs: "auto" }}
+              pl={{ xs: 0, xl: 6 }}
+            >
               <Image
                 src={image}
                 alt="steps"
