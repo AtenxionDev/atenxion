@@ -171,13 +171,35 @@ export const ContactUsForm = () => {
               handleChange={handleChange}
             />
 
-            <ButtonComponent
-              width="180px"
-              label="Request a demo"
-              onClick={handleSubmit}
-              loading={loading}
-              disabled={isBtnDisabled}
-            />
+            <Box
+              display={"flex"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              gap={3}
+              width={"100%"}
+            >
+              <ButtonComponent
+                width="170px"
+                height="40px"
+                label="Request a demo"
+                onClick={handleSubmit}
+                loading={loading}
+                disabled={isBtnDisabled}
+              />
+
+              <a
+                href={`mailto:${process.env.NEXT_PUBLIC_MAILTO_EMAIL}?subject=Subject%20Here&body=Message%20Here`}
+              >
+                <ButtonComponent
+                  width="100px"
+                  height="40px"
+                  label="Mail To"
+                  color="#212121"
+                  border="1px solid #212121"
+                  textColor="white"
+                />
+              </a>
+            </Box>
           </form>
         </Box>
       </Box>
