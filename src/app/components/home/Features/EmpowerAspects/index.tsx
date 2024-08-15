@@ -19,7 +19,7 @@ function EmpowerAspects() {
         mb={{ xs: 2, lg: 0 }}
       >
         <Heading color="custom.black">
-          Empowering in every aspects for your needs
+          Empowering in every aspect for your needs
         </Heading>
       </Box>
 

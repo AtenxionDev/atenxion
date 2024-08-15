@@ -130,6 +130,11 @@ function Navbar({ updateNavState = true }: IProps) {
               key={item.title}
               href={item.link}
               style={{ textDecoration: "none" }}
+              onClick={() => {
+                if (openResponsiveNav) {
+                  setOpenResponsiveNav(false);
+                }
+              }}
             >
               <Box key={item.title} sx={{ cursor: "pointer" }}>
                 <BodyText

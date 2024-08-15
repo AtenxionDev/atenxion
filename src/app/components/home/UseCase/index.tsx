@@ -35,7 +35,7 @@ const UseCase = () => {
       <Box maxWidth={{ xs: "100%", md: "85%", lg: "1100px", xl: "1200px" }}>
         <Box textAlign="center">
           <Heading color="custom.black">
-            Learn how Atenxion helping through
+            Learn how Atenxion helping is through
             <br /> across different use cases
           </Heading>
         </Box>
