@@ -63,7 +63,7 @@ function BookDemo() {
               alignItems="center"
               justifyContent="center"
             >
-              <Link href="/book-a-demo">
+              <Link href="/book-a-demo" style={{ textDecoration: "none" }}>
                 <ButtonComponent
                   label="Book a demo"
                   color="white"
@@ -73,6 +73,7 @@ function BookDemo() {
 
               <a
                 href={`mailto:${process.env.NEXT_PUBLIC_MAILTO_EMAIL}?subject=Subject%20Here&body=Message%20Here`}
+                style={{ textDecoration: "none" }}
               >
                 <ButtonComponent
                   label="Contact Us"

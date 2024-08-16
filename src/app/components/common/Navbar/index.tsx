@@ -156,7 +156,7 @@ function Navbar({ updateNavState = true }: IProps) {
               </Box>
             </a>
           ))}
-          <Link href="/book-a-demo">
+          <Link href="/book-a-demo" style={{ textDecoration: "none" }}>
             <ButtonComponent label="Book a demo" />
           </Link>
         </Box>

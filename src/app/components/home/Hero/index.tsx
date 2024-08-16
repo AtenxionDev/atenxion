@@ -58,7 +58,7 @@ function Hero() {
             </BodyText>
 
             <Box display="flex" flexDirection="row" gap={2} pt={2}>
-              <Link href="/book-a-demo">
+              <Link href="/book-a-demo" style={{ textDecoration: "none" }}>
                 <ButtonComponent label="Book a demo" />
               </Link>
             </Box>
