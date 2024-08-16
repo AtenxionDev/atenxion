@@ -20,14 +20,14 @@ const data = [
     title: "1:  Import your data",
     description:
       "Seamlessly upload your files, such as PDFs, Word documents, add a Website or sync data from platforms like Google Drive and Notion. ",
-    image: "/assets/agent/step1.svg",
+    image: "/assets/agent/step1.png",
   },
   {
     id: "panel1",
     title: "2:  Customize Behavior & Appearance",
     description:
       "Tailor your AI agent to align with your brand by adding logos, selecting color schemes, and setting the conversational tone with custom instructions, ensuring it reflects your brand’s personality. ",
-    image: "/assets/agent/step2.svg",
+    image: "/assets/agent/step2.png",
   },
   {
     id: "panel2",
@@ -48,13 +48,13 @@ const data = [
     title: "5:  Monitor Conversations & Gain Insights",
     description:
       "Track and analyze your AI agent's interactions with real-time insights and performance data. Continuously refine your strategies, optimize outcomes, and enhance customer satisfaction.",
-    image: "/assets/agent/step5.svg",
+    image: "/assets/agent/step5.png",
   },
 ];
 
 const AgentTraining = () => {
   const [expanded, setExpanded] = React.useState<string | false>("panel0");
-  const [image, setImage] = React.useState("/assets/agent/step1.svg");
+  const [image, setImage] = React.useState("/assets/agent/step1.png");
   const handleChange =
     (panel: PanelData) =>
     (event: React.SyntheticEvent, isExpanded: boolean) => {
