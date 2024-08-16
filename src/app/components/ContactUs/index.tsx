@@ -163,7 +163,7 @@ export const ContactUsForm = () => {
                   </BodyText>
                   <PhoneInput
                     international
-                    defaultCountry="MM"
+                    defaultCountry="SG"
                     value={values.phone}
                     onChange={(newVal) => setFieldValue("phone", newVal)}
                   />
