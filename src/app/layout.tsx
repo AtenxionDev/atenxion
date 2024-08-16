@@ -16,6 +16,22 @@ export const metadata: Metadata = {
   title: "Atenxion | No Code Gen AI for Enterprise",
   description: "Atenxion | No Code Gen AI for Enterprise",
   icons: "/assets/atenxion-small.svg",
+  openGraph: {
+    title: "Atenxion | No Code Gen AI for Enterprise",
+    description: "Atenxion | No Code Gen AI for Enterprise",
+    url: "https://www.atenxion.ai/",
+    siteName: "Atenxion",
+    images: [
+      {
+        url: "/assets/atenxion-small.svg",
+        width: 700,
+        height: 500,
+        alt: "Atenxion",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
