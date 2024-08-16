@@ -86,13 +86,16 @@ export const ContactUsForm = () => {
             enableReinitialize
             onSubmit={async (values, { resetForm }) => {
               setLoading(true);
-              const response = await fetch("/api/submitForm", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
+              const response = await fetch(
+                `${process.env.NEXT_PUBLIC_BACKEND_URL}message/submit-form`,
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(values),
                 },
-                body: JSON.stringify(values),
-              });
+              );
 
               if (response.ok) {
                 showToast("Form submitted successfully", "success");
