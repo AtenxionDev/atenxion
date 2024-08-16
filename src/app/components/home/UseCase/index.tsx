@@ -94,7 +94,7 @@ const UseCase = () => {
                 >
                   <Image
                     src={"/assets/customer.png"}
-                    style={{ aspectRatio: "auto" }}
+                    style={{ aspectRatio: "auto", borderRadius: "0 0 16px 0" }}
                     layout="responsive"
                     width={200}
                     height={200}
