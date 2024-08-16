@@ -123,6 +123,7 @@ const AgentTraining = () => {
                 xl: "650px",
                 lg: "550px",
                 md: "400px",
+                sm: "400px",
                 xs: "auto",
               }}
               pl={{ xs: 0, xl: 6 }}
