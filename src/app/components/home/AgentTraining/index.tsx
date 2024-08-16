@@ -34,14 +34,14 @@ const data = [
     title: "3:  Define Actions & Conversation Starters",
     description:
       "Empower your AI agent with custom actions for dynamic, personalized responses. Set up conversational starters to help users easily engage and get the information they need quickly. ",
-    image: "/assets/agent/step3.svg",
+    image: "/assets/agent/step3.png",
   },
   {
     id: "panel3",
     title: "4:  Embed or Integrate with Your Applications",
     description:
       "Effortlessly embed a custom chat widget into your website or integrate the AI agent with your existing applications via our APIs. Deliver seamless, AI-powered support across all customer touchpoints. ",
-    image: "/assets/agent/step4.svg",
+    image: "/assets/agent/step4.png",
   },
   {
     id: "panel4",
@@ -61,6 +61,7 @@ const AgentTraining = () => {
       setExpanded(isExpanded ? panel.id : false);
       setImage(panel.image);
     };
+
   return (
     <Layout bgColor="custom.cream">
       <Box
@@ -118,7 +119,12 @@ const AgentTraining = () => {
             }}
           >
             <Box
-              width={{ xl: "650px", lg: "550px", md: "400px", xs: "auto" }}
+              width={{
+                xl: "650px",
+                lg: "550px",
+                md: "400px",
+                xs: "auto",
+              }}
               pl={{ xs: 0, xl: 6 }}
             >
               <Image
@@ -127,7 +133,9 @@ const AgentTraining = () => {
                 width={500}
                 height={600}
                 layout="responsive"
-                style={{ maxWidth: "600px" }}
+                style={{
+                  maxWidth: "600px",
+                }}
               />
             </Box>
             <Box
